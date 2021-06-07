@@ -5,90 +5,90 @@
                 "question": "Query Data in S3 using SQL",
                 "answer": "Amazon Athena",
                 "distractors": [
-                    "AWS Application Discovery Service",
-                    "AWS DeepComposer",
-                    "Amazon EMR"
+                    "AWS DeepLens",
+                    "Amazon Detective",
+                    "AWS CodeBuild"
                 ]
             },
             {
                 "question": "Managed Search Service",
                 "answer": "Amazon CloudSearch",
                 "distractors": [
-                    "AWS Device Farm",
-                    "Amazon Timestream",
-                    "AWS Outposts"
+                    "AWS RoboMaker",
+                    "Savings Plans",
+                    "Amazon Athena"
                 ]
             },
             {
                 "question": "Run and Scale Elasticsearch Clusters",
                 "answer": "Amazon Elasticsearch Service",
                 "distractors": [
-                    "AWS App Mesh",
-                    "Amazon Elastic Transcoder",
-                    "AWS Firewall Manager"
+                    "AWS Organizations",
+                    "Amazon WorkDocs",
+                    "Amazon Simple Notification Service (SNS)"
                 ]
             },
             {
                 "question": "Hosted Hadoop Framework",
                 "answer": "Amazon EMR",
                 "distractors": [
-                    "Amazon Sumerian",
-                    "Amazon WorkMail",
-                    "AWS IoT 1-Click"
+                    "Amazon Elasticsearch Service",
+                    "AWS Glue",
+                    "AWS PrivateLink"
                 ]
             },
             {
                 "question": "Work with Real-time Streaming Data",
                 "answer": "Amazon Kinesis",
                 "distractors": [
-                    "AWS CloudFormation",
-                    "AWS RoboMaker",
-                    "Amazon Simple Storage Service (S3)"
+                    "AWS IoT Analytics",
+                    "Amazon DocumentDB (with MongoDB compatibility)",
+                    "Amazon Athena"
                 ]
             },
             {
                 "question": "Fast Business Analytics Service",
                 "answer": "Amazon QuickSight",
                 "distractors": [
-                    "AWS DeepLens",
-                    "AWS DeepComposer",
-                    "Amazon WorkDocs"
+                    "AWS Deep Learning AMIs",
+                    "Amazon Lex",
+                    "AWS DeepLens"
                 ]
             },
             {
                 "question": "Find, subscribe to, and use third-party data in the cloud",
                 "answer": "AWS Data Exchange",
                 "distractors": [
-                    "AWS IoT Device Defender",
-                    "AWS Cost and Usage Report",
-                    "AWS Elemental MediaPackage"
+                    "AWS WAF",
+                    "Amazon Lightsail",
+                    "Amazon Timestream"
                 ]
             },
             {
                 "question": "Orchestration Service for Periodic, Data-driven Workflows",
                 "answer": "AWS Data Pipeline",
                 "distractors": [
-                    "Amazon Aurora",
-                    "AWS DataSync",
-                    "Amazon DynamoDB"
+                    "Amazon DynamoDB",
+                    "AWS Direct Connect",
+                    "AWS Cloud Map"
                 ]
             },
             {
                 "question": "Prepare and Load Data",
                 "answer": "AWS Glue",
                 "distractors": [
-                    "Amazon Redshift",
-                    "Amazon RDS",
-                    "Amazon Pinpoint"
+                    "AWS Organizations",
+                    "AWS License Manager",
+                    "AWS Server Migration Service"
                 ]
             },
             {
                 "question": "Build a secure data lake in days",
                 "answer": "AWS Lake Formation",
                 "distractors": [
-                    "AWS Lake Formation",
-                    "Amazon Rekognition",
-                    "Amazon Redshift"
+                    "AWS DeepComposer",
+                    "Amazon Elastic Kubernetes Service",
+                    "AWS Well-Architected Tool"
                 ]
             }
         ],
@@ -97,45 +97,45 @@
                 "question": "Query Data in S3 using SQL",
                 "answer": "Amazon Athena",
                 "distractors": [
-                    "AWS DeepLens",
-                    "AWS Greengrass",
-                    "AWS Ground Station"
+                    "AWS Identity & Access Management",
+                    "AWS IoT 1-Click",
+                    "Amazon Sumerian"
                 ]
             },
             {
                 "question": "Managed Search Service",
                 "answer": "Amazon CloudSearch",
                 "distractors": [
-                    "AWS Transit Gateway",
-                    "Amazon Kinesis",
-                    "AWS Directory Service"
+                    "Amazon EMR",
+                    "AWS Systems Manager",
+                    "AWS Command Line Interface"
                 ]
             },
             {
                 "question": "Run and Scale Elasticsearch Clusters",
                 "answer": "Amazon Elasticsearch Service",
                 "distractors": [
-                    "AWS Lake Formation",
-                    "Amazon Rekognition",
-                    "AWS Server Migration Service"
+                    "Amazon Polly",
+                    "AWS Glue",
+                    "Amazon Chime"
                 ]
             },
             {
                 "question": "Hosted Hadoop Framework",
                 "answer": "Amazon EMR",
                 "distractors": [
-                    "Amazon Lightsail",
-                    "AWS Data Exchange",
-                    "AWS Elemental MediaConnect"
+                    "AWS Database Migration Service",
+                    "AWS CodePipeline",
+                    "AWS Cost Explorer"
                 ]
             },
             {
                 "question": "Work with Real-time Streaming Data",
                 "answer": "Amazon Kinesis",
                 "distractors": [
-                    "AWS Identity & Access Management",
-                    "Amazon CloudSearch",
-                    "Amazon Lightsail"
+                    "Amazon Pinpoint",
+                    "Amazon AppSync",
+                    "Amazon EMR"
                 ]
             }
         ],
@@ -144,9 +144,9 @@
                 "question": "Build and Run VR and AR Applications",
                 "answer": "Amazon Sumerian",
                 "distractors": [
-                    "AWS Elemental MediaConnect",
-                    "AWS Compute Optimizer",
-                    "Amazon Redshift"
+                    "Elastic Load Balancing",
+                    "Amazon Elasticsearch Service",
+                    "AWS DeepComposer"
                 ]
             }
         ],
@@ -155,45 +155,45 @@
                 "question": "Analyze Your AWS Cost and Usage",
                 "answer": "AWS Cost Explorer",
                 "distractors": [
-                    "AWS Compute Optimizer",
-                    "Amazon Simple Notification Service (SNS)",
-                    "AWS Transfer for SFTP"
+                    "AWS Elemental Appliances & Software",
+                    "Amazon Simple Queue Service (SQS)",
+                    "AWS Direct Connect"
                 ]
             },
             {
                 "question": "Set Custom Cost and Usage Budgets",
                 "answer": "AWS Budgets",
                 "distractors": [
-                    "Amazon Macie",
-                    "Apache MXNet on AWS",
-                    "Amazon Kinesis Video Streams"
+                    "Amazon EMR",
+                    "Amazon Elastic Block Store (EBS)",
+                    "Amazon Neptune"
                 ]
             },
             {
                 "question": "Access Comprehensive Cost and Usage Information",
                 "answer": "AWS Cost and Usage Report",
                 "distractors": [
-                    "AWS Step Functions",
-                    "Amazon Simple Storage Service (S3)",
-                    "AWS Migration Hub"
+                    "AWS Glue",
+                    "AWS IoT Things Graph",
+                    "AWS Database Migration Service"
                 ]
             },
             {
                 "question": "Dive Deeper into Your Reserved Instances (RIs)",
                 "answer": "Reserved Instance Reporting",
                 "distractors": [
-                    "Apache MXNet on AWS",
-                    "Amazon Quantum Ledger Database (QLDB)",
-                    "AWS Trusted Advisor"
+                    "Alexa for Business",
+                    "Amazon Sumerian",
+                    "Amazon Chime"
                 ]
             },
             {
                 "question": "Save up to 72% on compute usage with flexible pricing",
                 "answer": "Savings Plans",
                 "distractors": [
-                    "Amazon EMR",
-                    "AWS Server Migration Service",
-                    "AWS Organizations"
+                    "AWS Cloud9",
+                    "Amazon EventBridge",
+                    "AWS Transfer for SFTP"
                 ]
             }
         ],
@@ -202,18 +202,18 @@
                 "question": "Create and manage scalable blockchain networks",
                 "answer": "Amazon Managed Blockchain",
                 "distractors": [
-                    "Amazon Inferentia",
-                    "Amazon FSx for Windows File Server",
-                    "Amazon Fraud Detector (Preview)"
+                    "Amazon Managed Apache Cassandra Service",
+                    "Amazon EMR",
+                    "AWS OpsWorks"
                 ]
             },
             {
                 "question": "Fully managed ledger database",
                 "answer": "Amazon Quantum Ledger Database (QLDB)",
                 "distractors": [
-                    "AWS Ground Station",
-                    "AWS Global Accelerator",
-                    "AWS CodeBuild"
+                    "Amazon Kinesis",
+                    "Amazon QuickSight",
+                    "Reserved Instance Reporting"
                 ]
             }
         ],
@@ -222,36 +222,36 @@
                 "question": "Empower your Organization with Alexa",
                 "answer": "Alexa for Business",
                 "distractors": [
-                    "AWS Outposts",
-                    "AWS Elemental MediaStore",
-                    "Amazon Quantum Ledger Database (QLDB)"
+                    "AWS Certificate Manager",
+                    "Amazon EventBridge",
+                    "AWS Resource Access Manager"
                 ]
             },
             {
                 "question": "Frustration-free Meetings, Video Calls, and Chat",
                 "answer": "Amazon Chime",
                 "distractors": [
-                    "Amazon EMR",
-                    "AWS Personal Health Dashboard",
-                    "AWS Elemental MediaTailor"
+                    "AWS Control Tower",
+                    "Amazon Polly",
+                    "Amazon EC2 Auto Scaling"
                 ]
             },
             {
                 "question": "Secure enterprise document storage and sharing",
                 "answer": "Amazon WorkDocs",
                 "distractors": [
-                    "AWS Elemental MediaTailor",
-                    "Amazon API Gateway",
-                    "Amazon Route 53"
+                    "Amazon Simple Storage Service (S3)",
+                    "AWS Key Management Service",
+                    "Amazon WorkSpaces"
                 ]
             },
             {
                 "question": "Secure and Managed Business Email and Calendaring",
                 "answer": "Amazon WorkMail",
                 "distractors": [
-                    "Amazon Lightsail",
-                    "AWS Cloud9",
-                    "AWS IoT Button"
+                    "AWS IoT 1-Click",
+                    "Amazon EMR",
+                    "Amazon Inferentia"
                 ]
             }
         ],
@@ -260,26 +260,26 @@
                 "question": "Virtual Servers in the Cloud",
                 "answer": "Amazon EC2",
                 "distractors": [
-                    "Amazon Elastic File System (EFS)",
-                    "AWS Elemental MediaConnect",
-                    "AWS Greengrass"
+                    "AWS Compute Optimizer",
+                    "Amazon CloudWatch",
+                    "AWS Managed Services"
                 ]
             },
             {
                 "question": "Scale Compute Capacity to Meet Demand",
                 "answer": "Amazon EC2 Auto Scaling",
                 "distractors": [
-                    "AWS Snow Family",
-                    "AWS DataSync",
-                    "Contact Lens for Amazon Connect"
+                    "AWS Shield",
+                    "AWS Data Pipeline",
+                    "AWS WAF"
                 ]
             },
             {
                 "question": "Store and Retrieve Docker Images",
                 "answer": "Amazon Elastic Container Registry",
                 "distractors": [
-                    "Amazon Kendra",
-                    "AWS IoT SiteWise",
+                    "AWS Cloud Development Kit (CDK)",
+                    "Amazon DocumentDB (with MongoDB compatibility)",
                     "AWS Glue"
                 ]
             },
@@ -287,99 +287,99 @@
                 "question": "Run and Manage Docker Containers",
                 "answer": "Amazon Elastic Container Service",
                 "distractors": [
-                    "AWS Lambda",
-                    "AWS Database Migration Service",
-                    "Amazon Comprehend"
+                    "AWS Resource Access Manager",
+                    "AWS Deep Learning Containers",
+                    "AWS IoT Button"
                 ]
             },
             {
                 "question": "Run Managed Kubernetes on AWS",
                 "answer": "Amazon Elastic Kubernetes Service",
                 "distractors": [
-                    "CloudEndure Disaster Recovery",
-                    "AWS Directory Service",
-                    "AWS CloudHSM"
+                    "AWS Global Accelerator",
+                    "Alexa for Business",
+                    "Amazon DocumentDB (with MongoDB compatibility)"
                 ]
             },
             {
                 "question": "Launch and Manage Virtual Private Servers",
                 "answer": "Amazon Lightsail",
                 "distractors": [
-                    "Amazon Kinesis",
-                    "Amazon Managed Streaming for Apache Kafka",
-                    "AWS Elemental MediaConvert"
+                    "AWS IoT Analytics",
+                    "AWS DeepRacer",
+                    "Apache MXNet on AWS"
                 ]
             },
             {
                 "question": "Run Batch Jobs at Any Scale",
                 "answer": "AWS Batch",
                 "distractors": [
-                    "AWS IoT Events",
-                    "AWS RoboMaker",
-                    "AWS Resource Access Manager"
+                    "AWS Auto Scaling",
+                    "Amazon EventBridge",
+                    "AWS Elemental MediaConnect"
                 ]
             },
             {
                 "question": "Run and Manage Web Apps",
                 "answer": "AWS Elastic Beanstalk",
                 "distractors": [
-                    "Amazon Managed Blockchain",
-                    "AWS Amplify",
-                    "AWS IoT Analytics"
+                    "AWS Device Farm",
+                    "Apache MXNet on AWS",
+                    "Amazon Simple Storage Service (S3)"
                 ]
             },
             {
                 "question": "Run Containers without Managing Servers or Clusters",
                 "answer": "AWS Fargate",
                 "distractors": [
-                    "AWS Management Console",
-                    "Amazon Kinesis",
-                    "AWS Greengrass"
+                    "Amazon Elastic Block Store (EBS)",
+                    "AWS Elemental MediaStore",
+                    "AWS Chatbot"
                 ]
             },
             {
                 "question": "Run your Code in Response to Events",
                 "answer": "AWS Lambda",
                 "distractors": [
-                    "Amazon QuickSight",
-                    "AWS Partner Device Catalog",
-                    "AWS Auto Scaling"
+                    "AWS Budgets",
+                    "Amazon EMR",
+                    "Amazon DocumentDB (with MongoDB compatibility)"
                 ]
             },
             {
                 "question": "Run AWS services on-premises",
                 "answer": "AWS Outposts",
                 "distractors": [
-                    "AWS Control Tower",
-                    "AWS Single Sign-On",
-                    "AWS License Manager"
+                    "AWS WAF",
+                    "Amazon Braket",
+                    "AWS Glue"
                 ]
             },
             {
                 "question": "Discover, Deploy, and Publish Serverless Applications",
                 "answer": "AWS Serverless Application Repository",
                 "distractors": [
-                    "Amazon SageMaker Ground Truth",
-                    "Amazon FSx for Lustre",
-                    "AWS Cloud Map"
+                    "AWS App Mesh",
+                    "Amazon Translate",
+                    "AWS Lake Formation"
                 ]
             },
             {
                 "question": "Deliver ultra-low latency applications for 5G devices",
                 "answer": "AWS Wavelength",
                 "distractors": [
-                    "AWS Storage Gateway",
-                    "TensorFlow on AWS",
-                    "AWS Elemental MediaLive"
+                    "AWS Outposts",
+                    "AWS AppSync",
+                    "Amazon GuardDuty"
                 ]
             },
             {
                 "question": "Build a Hybrid Cloud without Custom Hardware",
                 "answer": "VMware Cloud on AWS",
                 "distractors": [
-                    "Amazon FSx for Windows File Server",
-                    "AWS Managed Services",
-                    "AWS Serverless Application Repository"
+                    "Amazon CloudSearch",
+                    "AWS Application Discovery Service",
+                    "AWS Secrets Manager"
                 ]
             }
         ],
@@ -388,36 +388,36 @@
                 "question": "Cloud-based Contact Center",
                 "answer": "Amazon Connect",
                 "distractors": [
-                    "AWS Elemental MediaLive",
-                    "AWS Wavelength",
-                    "AWS Managed Services"
+                    "Alexa for Business",
+                    "Amazon Athena",
+                    "Amazon CloudSearch"
                 ]
             },
             {
                 "question": "Personalized User Engagement Across Channels",
                 "answer": "Amazon Pinpoint",
                 "distractors": [
-                    "Amazon Kinesis Video Streams",
-                    "Amazon Elastic Container Registry",
-                    "Amazon Connect"
+                    "AWS Amplify",
+                    "Amazon API Gateway",
+                    "AWS Command Line Interface"
                 ]
             },
             {
                 "question": "Email Sending and Receiving",
                 "answer": "Amazon Simple Email Service (SES)",
                 "distractors": [
-                    "Amazon Kinesis Video Streams",
-                    "Amazon Pinpoint",
-                    "Amazon Elastic File System (EFS)"
+                    "Amazon Textract",
+                    "AWS Backup",
+                    "Amazon Athena"
                 ]
             },
             {
                 "question": "Contact center analytics powered by ML",
                 "answer": "Contact Lens for Amazon Connect",
                 "distractors": [
-                    "Amazon Simple Storage Service (S3)",
-                    "Amazon VPC",
-                    "AWS Lake Formation"
+                    "AWS Artifact",
+                    "AWS Deep Learning AMIs",
+                    "AWS Tools and SDKs"
                 ]
             }
         ],
@@ -426,98 +426,98 @@
                 "question": "High Performance Managed Relational Database",
                 "answer": "Amazon Aurora",
                 "distractors": [
-                    "AWS IoT 1-Click",
-                    "AWS Elemental MediaConnect",
-                    "Amazon WorkDocs"
+                    "Amazon DocumentDB (with MongoDB compatibility)",
+                    "AWS Database Migration Service",
+                    "Amazon SageMaker Ground Truth"
                 ]
             },
             {
                 "question": "Managed NoSQL Database",
                 "answer": "Amazon DynamoDB",
                 "distractors": [
-                    "AWS IoT SiteWise",
-                    "AWS Backup",
-                    "Amazon Braket"
+                    "AWS Certificate Manager",
+                    "Amazon Elastic Container Registry",
+                    "Amazon Transcribe"
                 ]
             },
             {
                 "question": "Fully managed document database",
                 "answer": "Amazon DocumentDB (with MongoDB compatibility)",
                 "distractors": [
-                    "Amazon Elastic Block Store (EBS)",
-                    "AWS Elemental MediaTailor",
-                    "AWS Deep Learning Containers"
+                    "AWS License Manager",
+                    "Amazon Elastic Kubernetes Service",
+                    "AWS IoT Events"
                 ]
             },
             {
                 "question": "In-memory Caching System",
                 "answer": "Amazon ElastiCache",
                 "distractors": [
-                    "Amazon Lumberyard",
-                    "Amazon Neptune",
-                    "Amazon Elasticsearch Service"
+                    "AWS Cloud Development Kit (CDK)",
+                    "Amazon CloudWatch",
+                    "AWS Elemental Appliances & Software"
                 ]
             },
             {
                 "question": "Managed Cassandra-compatible database",
                 "answer": "Amazon Managed Apache Cassandra Service",
                 "distractors": [
-                    "AWS Console Mobile Application",
-                    "AWS Amplify",
-                    "Amazon FSx for Lustre"
+                    "AWS RoboMaker",
+                    "AWS Elemental MediaConvert",
+                    "AWS Database Migration Service"
                 ]
             },
             {
                 "question": "Fully Managed Graph Database Service",
                 "answer": "Amazon Neptune",
                 "distractors": [
-                    "Amazon WorkLink",
-                    "Amazon Pinpoint",
-                    "Amazon ElastiCache"
+                    "AWS Auto Scaling",
+                    "Amazon Elastic Container Service",
+                    "AWS Cloud9"
                 ]
             },
             {
                 "question": "Fully managed ledger database",
                 "answer": "Amazon Quantum Ledger Database (QLDB)",
                 "distractors": [
-                    "AWS OpsWorks",
-                    "AWS Resource Access Manager",
-                    "AWS Snow Family"
+                    "AWS WAF",
+                    "Amazon Sumerian",
+                    "Amazon Timestream"
                 ]
             },
             {
                 "question": "Managed Relational Database Service for MySQL, PostgreSQL, Oracle, SQL Server, and MariaDB",
                 "answer": "Amazon RDS",
                 "distractors": [
-                    "AWS Snow Family",
-                    "AWS IoT Core",
-                    "Amazon Rekognition"
+                    "AWS Elemental MediaLive",
+                    "AWS Security Hub",
+                    "AWS Elemental MediaConnect"
                 ]
             },
             {
                 "question": "Automate on-premises database management",
                 "answer": "Amazon RDS on VMware",
                 "distractors": [
-                    "Amazon Elastic Inference",
-                    "AWS Application Discovery Service",
-                    "Amazon Macie"
+                    "Amazon QuickSight",
+                    "Amazon AppSync",
+                    "Amazon Elastic Transcoder"
                 ]
             },
             {
                 "question": "Fast, Simple, Cost-effective Data Warehousing",
                 "answer": "Amazon Redshift",
                 "distractors": [
-                    "AWS Management Console",
-                    "Amazon VPC",
-                    "AWS License Manager"
+                    "Amazon Elastic Container Service",
+                    "AWS Elemental MediaConvert",
+                    "AWS Cloud9"
                 ]
             },
             {
                 "question": "Fully managed time series database",
                 "answer": "Amazon Timestream",
                 "distractors": [
-                    "AWS Lake Formation",
-                    "AWS Budgets",
+                    "Amazon Elastic Block Store (EBS)",
+                    "Amazon Simple Email Service (SES)",
                     "Amazon WorkSpaces"
                 ]
             },
@@ -525,9 +525,9 @@
                 "question": "Migrate Databases with Minimal Downtime",
                 "answer": "AWS Database Migration Service",
                 "distractors": [
-                    "Amazon API Gateway",
-                    "Amazon Elasticsearch Service",
-                    "Amazon Inspector"
+                    "Amazon Simple Notification Service (SNS)",
+                    "Amazon Elastic Kubernetes Service",
+                    "Amazon Elastic Inference"
                 ]
             }
         ],
@@ -536,108 +536,108 @@
                 "question": "Production-ready distribution of OpenJDK",
                 "answer": "Amazon Corretto",
                 "distractors": [
-                    "AWS Key Management Service",
-                    "AWS Cloud9",
-                    "Alexa for Business"
+                    "AWS X-Ray",
+                    "AWS CodePipeline",
+                    "Apache MXNet on AWS"
                 ]
             },
             {
                 "question": "Model cloud infrastructure using code",
                 "answer": "AWS Cloud Development Kit (CDK)",
                 "distractors": [
-                    "Amazon FSx for Windows File Server",
-                    "Amazon Detective",
-                    "AWS CloudHSM"
+                    "Amazon SageMaker Ground Truth",
+                    "AWS Elemental MediaStore",
+                    "Amazon Detective"
                 ]
             },
             {
                 "question": "Write, Run, and Debug Code on a Cloud IDE",
                 "answer": "AWS Cloud9",
                 "distractors": [
-                    "AWS Security Hub",
-                    "Amazon VPC",
-                    "AWS Budgets"
+                    "AWS Direct Connect",
+                    "AWS Wavelength",
+                    "AWS IoT Events"
                 ]
             },
             {
                 "question": "Build and Test Code",
                 "answer": "AWS CodeBuild",
                 "distractors": [
+                    "Amazon SageMaker",
                     "AWS IoT SiteWise",
-                    "AWS Firewall Manager",
-                    "AWS DeepRacer"
+                    "Amazon Personalize"
                 ]
             },
             {
                 "question": "Store Code in Private Git Repositories",
                 "answer": "AWS CodeCommit",
                 "distractors": [
-                    "AWS Elemental MediaConvert",
-                    "Amazon CloudSearch",
-                    "TensorFlow on AWS"
+                    "Amazon Transcribe",
+                    "Amazon EMR",
+                    "Amazon Elasticsearch Service"
                 ]
             },
             {
                 "question": "Automate Code Deployment",
                 "answer": "AWS CodeDeploy",
                 "distractors": [
-                    "AWS Identity & Access Management",
-                    "AWS IoT Analytics",
-                    "AWS Glue"
+                    "AWS Elemental MediaLive",
+                    "Amazon API Gateway",
+                    "Amazon Route 53"
                 ]
             },
             {
                 "question": "Release Software using Continuous Deliver",
                 "answer": "AWS CodePipeline",
                 "distractors": [
-                    "Amazon AppStream 2.0",
-                    "AWS IoT Device Management",
-                    "Amazon Inspector"
+                    "Amazon AppSync",
+                    "Alexa for Business",
+                    "AWS IoT 1-Click"
                 ]
             },
             {
                 "question": "Develop and Deploy AWS Applications",
                 "answer": "AWS CodeStar",
                 "distractors": [
-                    "Elastic Load Balancing",
-                    "AWS Wavelength",
-                    "AWS CodeCommit"
+                    "AWS Organizations",
+                    "Amazon GameLift",
+                    "AWS Data Pipeline"
                 ]
             },
             {
                 "question": "Unified Tool to Manage AWS Services",
                 "answer": "AWS Command Line Interface",
                 "distractors": [
-                    "Elastic Load Balancing",
-                    "AWS Data Pipeline",
-                    "AWS IoT Button"
+                    "AWS Lake Formation",
+                    "Amazon Elastic Block Store (EBS)",
+                    "AWS DeepComposer"
                 ]
             },
             {
                 "question": "Test Android, iOS, and web apps on real devices in the AWS cloud",
                 "answer": "AWS Device Farm",
                 "distractors": [
-                    "AWS Elemental MediaPackage",
-                    "Amazon CodeGuru (Preview)",
-                    "Amazon Quantum Ledger Database (QLDB)"
+                    "AWS RoboMaker",
+                    "Amazon Inspector",
+                    "AWS License Manager"
                 ]
             },
             {
                 "question": "Tools and SDKs for AWS",
                 "answer": "AWS Tools and SDKs",
                 "distractors": [
-                    "AWS Shield",
-                    "AWS Console Mobile Application",
-                    "AWS Snow Family"
+                    "AWS Data Pipeline",
+                    "AWS IoT Core",
+                    "Amazon Augmented AI"
                 ]
             },
             {
                 "question": "Analyze and debug your applications",
                 "answer": "AWS X-Ray",
                 "distractors": [
-                    "AWS Snow Family",
-                    "Amazon QuickSight",
-                    "AWS WAF"
+                    "AWS Ground Station",
+                    "AWS IoT Analytics",
+                    "Amazon ElastiCache"
                 ]
             }
         ],
@@ -646,36 +646,36 @@
                 "question": "Stream Desktop Applications Securely to a Browser",
                 "answer": "Amazon AppStream 2.0",
                 "distractors": [
-                    "AWS Ground Station",
-                    "Amazon FSx for Lustre",
-                    "AWS Well-Architected Tool"
+                    "AWS IoT Device Defender",
+                    "AWS Glue",
+                    "Amazon EC2"
                 ]
             },
             {
                 "question": "Secure enterprise document storage and sharing",
                 "answer": "Amazon WorkDocs",
                 "distractors": [
+                    "Amazon Elastic Transcoder",
                     "Amazon Kinesis Video Streams",
-                    "Amazon Polly",
-                    "AWS Chatbot"
+                    "Amazon CloudSearch"
                 ]
             },
             {
                 "question": "Enable mobile access to internal websites",
                 "answer": "Amazon WorkLink",
                 "distractors": [
-                    "AWS Transit Gateway",
-                    "AWS Elemental MediaStore",
-                    "Amazon Managed Blockchain"
+                    "AWS Lambda",
+                    "Amazon CodeGuru (Preview)",
+                    "Amazon Inspector"
                 ]
             },
             {
                 "question": "Desktop Computing Service",
                 "answer": "Amazon WorkSpaces",
                 "distractors": [
-                    "Amazon SageMaker Ground Truth",
-                    "Amazon API Gateway",
-                    "AWS Backup"
+                    "AWS Global Accelerator",
+                    "Amazon Kinesis",
+                    "AWS X-Ray"
                 ]
             }
         ],
@@ -684,18 +684,18 @@
                 "question": "Simple, Fast, Cost-effective Dedicated Game Server Hosting",
                 "answer": "Amazon GameLift",
                 "distractors": [
-                    "AWS Elemental MediaStore",
-                    "AWS Deep Learning Containers",
-                    "AWS Elemental MediaTailor"
+                    "Apache MXNet on AWS",
+                    "AWS Console Mobile Application",
+                    "Amazon GuardDuty"
                 ]
             },
             {
                 "question": "A Free Cross-platform 3D Game Engine with Full Source, Integrated with AWS and Twitch",
                 "answer": "Amazon Lumberyard",
                 "distractors": [
-                    "AWS Systems Manager",
-                    "AWS Command Line Interface",
-                    "AWS Resource Access Manager"
+                    "TensorFlow on AWS",
+                    "Amazon CloudWatch",
+                    "AWS Chatbot"
                 ]
             }
         ],
@@ -704,108 +704,108 @@
                 "question": "Connect Devices to the Cloud",
                 "answer": "AWS IoT Core",
                 "distractors": [
-                    "Amazon ElastiCache",
-                    "Amazon Lumberyard",
-                    "AWS AppSync"
+                    "Amazon Translate",
+                    "Amazon Lightsail",
+                    "Amazon Corretto"
                 ]
             },
             {
                 "question": "IoT Operating System for Microcontrollers",
                 "answer": "Amazon FreeRTOS",
                 "distractors": [
-                    "Apache MXNet on AWS",
-                    "AWS CodeDeploy",
-                    "AWS Chatbot"
+                    "AWS X-Ray",
+                    "Amazon AppSync",
+                    "AWS Amplify"
                 ]
             },
             {
                 "question": "Local Compute, Messaging, and Sync for Devices",
                 "answer": "AWS Greengrass",
                 "distractors": [
-                    "AWS Data Pipeline",
-                    "Amazon CodeGuru (Preview)",
-                    "AWS Auto Scaling"
+                    "AWS Cost and Usage Report",
+                    "AWS Backup",
+                    "AWS IoT SiteWise"
                 ]
             },
             {
                 "question": "One Click Creation of an AWS Lambda Trigger",
                 "answer": "AWS IoT 1-Click",
                 "distractors": [
-                    "Amazon Elastic Container Registry",
-                    "AWS DeepRacer",
-                    "AWS Data Exchange"
+                    "AWS Command Line Interface",
+                    "AWS Directory Service",
+                    "AWS X-Ray"
                 ]
             },
             {
                 "question": "Analytics for IoT Devices",
                 "answer": "AWS IoT Analytics",
                 "distractors": [
-                    "AWS Chatbot",
-                    "Amazon Simple Storage Service (S3)",
-                    "Amazon Personalize"
+                    "AWS Elemental MediaConvert",
+                    "AWS Server Migration Service",
+                    "AWS OpsWorks"
                 ]
             },
             {
                 "question": "Cloud Programmable Dash Button",
                 "answer": "AWS IoT Button",
                 "distractors": [
-                    "Amazon Corretto",
-                    "AWS Chatbot",
-                    "Amazon Simple Storage Service (S3)"
+                    "Amazon Rekognition",
+                    "AWS DeepLens",
+                    "AWS CodePipeline"
                 ]
             },
             {
                 "question": "Security Management for IoT Devices",
                 "answer": "AWS IoT Device Defender",
                 "distractors": [
-                    "Amazon Inspector",
-                    "AWS Database Migration Service",
-                    "AWS Organizations"
+                    "Amazon Textract",
+                    "Amazon Braket",
+                    "AWS Console Mobile Application"
                 ]
             },
             {
                 "question": "Onboard, Organize, and Remotely Manage IoT Devices",
                 "answer": "AWS IoT Device Management",
                 "distractors": [
-                    "AWS IoT Analytics",
-                    "Amazon Redshift",
-                    "Amazon Comprehend"
+                    "Amazon Kinesis",
+                    "Amazon Athena",
+                    "Amazon Elastic Kubernetes Service"
                 ]
             },
             {
                 "question": "IoT event detection and response",
                 "answer": "AWS IoT Events",
                 "distractors": [
-                    "AWS Shield",
-                    "AWS CloudHSM",
-                    "AWS Storage Gateway"
+                    "Amazon RDS on VMware",
+                    "AWS CodeStar",
+                    "Amazon Rekognition"
                 ]
             },
             {
                 "question": "IoT data collector and interpreter",
                 "answer": "AWS IoT SiteWise",
                 "distractors": [
-                    "Amazon Kinesis",
-                    "AWS Organizations",
-                    "Amazon SageMaker Ground Truth"
+                    "CloudEndure Migration",
+                    "AWS IoT Things Graph",
+                    "Amazon Chime"
                 ]
             },
             {
                 "question": "Easily connect devices and web services",
                 "answer": "AWS IoT Things Graph",
                 "distractors": [
-                    "Amazon CloudWatch",
-                    "AWS Global Accelerator",
-                    "Amazon Braket"
+                    "AWS Step Functions",
+                    "Amazon Managed Blockchain",
+                    "Amazon Comprehend"
                 ]
             },
             {
                 "question": "Curated catalog of AWS-compatible IoT hardware",
                 "answer": "AWS Partner Device Catalog",
                 "distractors": [
-                    "AWS Device Farm",
-                    "Amazon WorkMail",
-                    "AWS Systems Manager"
+                    "Amazon Elastic Kubernetes Service",
+                    "AWS Data Exchange",
+                    "VMware Cloud on AWS"
                 ]
             }
         ],
@@ -814,216 +814,216 @@
                 "question": "Build, Train, and Deploy Machine Learning Models at Scale",
                 "answer": "Amazon SageMaker",
                 "distractors": [
-                    "AWS IoT Button",
-                    "AWS IoT Events",
-                    "AWS PrivateLink"
+                    "Amazon Athena",
+                    "Amazon Elastic File System (EFS)",
+                    "Amazon Simple Email Service (SES)"
                 ]
             },
             {
                 "question": "Easily implement human review of ML predictions",
                 "answer": "Amazon Augmented AI",
                 "distractors": [
-                    "AWS Batch",
-                    "Amazon Simple Email Service (SES)",
-                    "AWS IoT Button"
+                    "AWS Ground Station",
+                    "AWS Cloud Development Kit (CDK)",
+                    "AWS IoT Device Management"
                 ]
             },
             {
                 "question": "Automate code reviews and identify expensive lines of code",
                 "answer": "Amazon CodeGuru (Preview)",
                 "distractors": [
-                    "AWS Batch",
-                    "AWS IoT Things Graph",
-                    "Amazon Simple Email Service (SES)"
+                    "AWS Database Migration Service",
+                    "Amazon EventBridge",
+                    "Amazon Textract"
                 ]
             },
             {
                 "question": "Discover Insights and Relationships in Text",
                 "answer": "Amazon Comprehend",
                 "distractors": [
-                    "AWS DeepRacer",
-                    "Amazon Textract",
-                    "AWS Step Functions"
+                    "AWS Transit Gateway",
+                    "Amazon Timestream",
+                    "AWS Device Farm"
                 ]
             },
             {
                 "question": "Deep learning inference acceleration",
                 "answer": "Amazon Elastic Inference",
                 "distractors": [
-                    "AWS Resource Access Manager",
-                    "AWS License Manager",
-                    "AWS Direct Connect"
+                    "AWS WAF",
+                    "Amazon FreeRTOS",
+                    "AWS Outposts"
                 ]
             },
             {
                 "question": "Increase forecast accuracy using machine learning",
                 "answer": "Amazon Forecast",
                 "distractors": [
-                    "AWS DeepRacer",
-                    "Amazon Fraud Detector (Preview)",
-                    "Amazon Polly"
+                    "CloudEndure Migration",
+                    "AWS PrivateLink",
+                    "AWS Service Catalog"
                 ]
             },
             {
                 "question": "Detect more online fraud faster",
                 "answer": "Amazon Fraud Detector (Preview)",
                 "distractors": [
-                    "Amazon Braket",
-                    "AWS IoT Device Management",
-                    "AWS Lake Formation"
+                    "AWS Personal Health Dashboard",
+                    "Amazon Macie",
+                    "AWS Elemental MediaTailor"
                 ]
             },
             {
                 "question": "Reinvent enterprise search with ML",
                 "answer": "Amazon Kendra",
                 "distractors": [
-                    "AWS Elemental MediaPackage",
-                    "Amazon ElastiCache",
-                    "AWS Console Mobile Application"
+                    "AWS Greengrass",
+                    "Amazon Aurora",
+                    "Amazon DocumentDB (with MongoDB compatibility)"
                 ]
             },
             {
                 "question": "Build Voice and Text Chatbots",
                 "answer": "Amazon Lex",
                 "distractors": [
-                    "Amazon QuickSight",
-                    "AWS Snow Family",
-                    "CloudEndure Disaster Recovery"
+                    "Amazon GuardDuty",
+                    "Amazon Simple Email Service (SES)",
+                    "AWS Cloud9"
                 ]
             },
             {
                 "question": "Build real-time recommendations into your applications",
                 "answer": "Amazon Personalize",
                 "distractors": [
-                    "AWS IoT Device Management",
-                    "AWS Firewall Manager",
-                    "Amazon Lumberyard"
+                    "AWS Device Farm",
+                    "AWS Auto Scaling",
+                    "Amazon Neptune"
                 ]
             },
             {
                 "question": "Turn Text into Lifelike Speech",
                 "answer": "Amazon Polly",
                 "distractors": [
-                    "Amazon Lightsail",
-                    "AWS Shield",
-                    "Amazon Timestream"
+                    "AWS CodeBuild",
+                    "AWS Elemental MediaConnect",
+                    "AWS CodeCommit"
                 ]
             },
             {
                 "question": "Analyze Image and Video",
                 "answer": "Amazon Rekognition",
                 "distractors": [
-                    "Amazon EventBridge",
-                    "AWS IoT Button",
-                    "AWS Elemental MediaConvert"
+                    "Amazon EC2 Auto Scaling",
+                    "AWS Elemental MediaStore",
+                    "Amazon Corretto"
                 ]
             },
             {
                 "question": "Build accurate ML training datasets",
                 "answer": "Amazon SageMaker Ground Truth",
                 "distractors": [
-                    "AWS RoboMaker",
-                    "Amazon Rekognition",
-                    "AWS WAF"
+                    "Amazon Elastic Container Service",
+                    "AWS Well-Architected Tool",
+                    "Amazon MQ"
                 ]
             },
             {
                 "question": "Extract text and data from documents",
                 "answer": "Amazon Textract",
                 "distractors": [
-                    "AWS PrivateLink",
-                    "Amazon ElastiCache",
-                    "AWS Command Line Interface"
+                    "AWS Elemental MediaPackage",
+                    "Amazon WorkSpaces",
+                    "Amazon EC2"
                 ]
             },
             {
                 "question": "Natural and Fluent Language Translation",
                 "answer": "Amazon Translate",
                 "distractors": [
-                    "Amazon Macie",
-                    "Amazon WorkMail",
-                    "AWS Greengrass"
+                    "Amazon CloudSearch",
+                    "AWS RoboMaker",
+                    "Amazon Athena"
                 ]
             },
             {
                 "question": "Automatic Speech Recognition",
                 "answer": "Amazon Transcribe",
                 "distractors": [
-                    "AWS Organizations",
-                    "AWS Elemental MediaConnect",
-                    "Amazon Personalize"
+                    "Amazon EC2 Auto Scaling",
+                    "Reserved Instance Reporting",
+                    "AWS Outposts"
                 ]
             },
             {
                 "question": "Quickly Start Deep Learning on EC2",
                 "answer": "AWS Deep Learning AMIs",
                 "distractors": [
-                    "AWS Snow Family",
-                    "AWS IoT Button",
-                    "Amazon EMR"
+                    "AWS CodeBuild",
+                    "Amazon ElastiCache",
+                    "Amazon WorkDocs"
                 ]
             },
             {
                 "question": "Docker images for deep learning",
                 "answer": "AWS Deep Learning Containers",
                 "distractors": [
-                    "TensorFlow on AWS",
-                    "Amazon Aurora",
-                    "AWS Step Functions"
+                    "Amazon Simple Storage Service (S3)",
+                    "AWS Elemental MediaLive",
+                    "AWS Organizations"
                 ]
             },
             {
                 "question": "ML enabled musical keyboard",
                 "answer": "AWS DeepComposer",
                 "distractors": [
-                    "Amazon Polly",
-                    "AWS Resource Access Manager",
-                    "Amazon Textract"
+                    "Amazon Pinpoint",
+                    "Amazon Timestream",
+                    "Amazon Kendra"
                 ]
             },
             {
                 "question": "Deep Learning Enabled Video Camera",
                 "answer": "AWS DeepLens",
                 "distractors": [
-                    "Amazon QuickSight",
-                    "Amazon Elastic Container Registry",
-                    "AWS Lake Formation"
+                    "AWS Cloud Map",
+                    "Amazon Augmented AI",
+                    "Amazon Corretto"
                 ]
             },
             {
                 "question": "Autonomous 1/18th scale race car, driven by ML",
                 "answer": "AWS DeepRacer",
                 "distractors": [
-                    "Amazon API Gateway",
-                    "AWS WAF",
-                    "AWS Elemental MediaConvert"
+                    "AWS Data Exchange",
+                    "Amazon Kinesis Video Streams",
+                    "Amazon Kinesis"
                 ]
             },
             {
                 "question": "Machine learning inference chip",
                 "answer": "Amazon Inferentia",
                 "distractors": [
-                    "Amazon CodeGuru (Preview)",
-                    "Amazon Athena",
-                    "AWS Wavelength"
+                    "Amazon Managed Blockchain",
+                    "Amazon DynamoDB",
+                    "AWS Artifact"
                 ]
             },
             {
                 "question": "Scalable, High-performance Deep Learning",
                 "answer": "Apache MXNet on AWS",
                 "distractors": [
-                    "Amazon RDS on VMware",
-                    "AWS Elemental MediaStore",
-                    "Amazon Braket"
+                    "Amazon Fraud Detector (Preview)",
+                    "Amazon Athena",
+                    "Reserved Instance Reporting"
                 ]
             },
             {
                 "question": "Open-source Machine Intelligence Library",
                 "answer": "TensorFlow on AWS",
                 "distractors": [
-                    "Amazon Detective",
-                    "AWS Cloud9",
-                    "AWS Identity & Access Management"
+                    "AWS Direct Connect",
+                    "Amazon Sumerian",
+                    "AWS IoT Analytics"
                 ]
             }
         ],
@@ -1032,180 +1032,180 @@
                 "question": "Monitor Resources and Applications",
                 "answer": "Amazon CloudWatch",
                 "distractors": [
-                    "AWS Systems Manager",
-                    "AWS Chatbot",
-                    "Amazon Detective"
+                    "Amazon Simple Storage Service (S3)",
+                    "Amazon Inferentia",
+                    "AWS Elemental MediaConnect"
                 ]
             },
             {
                 "question": "Scale Multiple Resources to Meet Demand",
                 "answer": "AWS Auto Scaling",
                 "distractors": [
-                    "AWS Organizations",
-                    "AWS Device Farm",
-                    "AWS Partner Device Catalog"
+                    "Amazon Braket",
+                    "Amazon Rekognition",
+                    "AWS Cloud Development Kit (CDK)"
                 ]
             },
             {
                 "question": "ChatOps for AWS",
                 "answer": "AWS Chatbot",
                 "distractors": [
-                    "Amazon RDS",
-                    "AWS Lake Formation",
-                    "AWS DeepRacer"
+                    "Amazon Pinpoint",
+                    "AWS Cloud Development Kit (CDK)",
+                    "AWS Device Farm"
                 ]
             },
             {
                 "question": "Create and Manage Resources with Templates",
                 "answer": "AWS CloudFormation",
                 "distractors": [
-                    "AWS Cloud Development Kit (CDK)",
-                    "AWS Lambda",
-                    "AWS Service Catalog"
+                    "Amazon Managed Streaming for Apache Kafka",
+                    "AWS DeepLens",
+                    "AWS DeepRacer"
                 ]
             },
             {
                 "question": "Track User Activity and API Usage",
                 "answer": "AWS CloudTrail",
                 "distractors": [
-                    "Amazon WorkMail",
-                    "Amazon Quantum Ledger Database (QLDB)",
-                    "Amazon EC2"
+                    "Contact Lens for Amazon Connect",
+                    "Amazon Elastic Transcoder",
+                    "Amazon Fraud Detector (Preview)"
                 ]
             },
             {
                 "question": "Unified tool to manage AWS services",
                 "answer": "AWS Command Line Interface",
                 "distractors": [
-                    "CloudEndure Migration",
-                    "AWS Glue",
-                    "Amazon MQ"
+                    "Apache MXNet on AWS",
+                    "AWS Transit Gateway",
+                    "AWS Global Accelerator"
                 ]
             },
             {
                 "question": "Identify optimal AWS Compute resources",
                 "answer": "AWS Compute Optimizer",
                 "distractors": [
-                    "Amazon S3 Glacier",
-                    "AWS Tools and SDKs",
-                    "Amazon Transcribe"
+                    "Amazon Inspector",
+                    "AWS Lake Formation",
+                    "Reserved Instance Reporting"
                 ]
             },
             {
                 "question": "Track Resource Inventory and Changes",
                 "answer": "AWS Config",
                 "distractors": [
-                    "Amazon Managed Streaming for Apache Kafka",
-                    "Amazon WorkDocs",
-                    "AWS CodeStar"
+                    "AWS WAF",
+                    "Amazon QuickSight",
+                    "AWS Budgets"
                 ]
             },
             {
                 "question": "Set up and govern a secure, compliant, multi-account environment",
                 "answer": "AWS Control Tower",
                 "distractors": [
-                    "AWS Elemental Appliances & Software",
-                    "AWS Transfer for SFTP",
-                    "Amazon Aurora"
+                    "Amazon Redshift",
+                    "AWS Direct Connect",
+                    "Amazon MQ"
                 ]
             },
             {
                 "question": "Access resources on the go",
                 "answer": "AWS Console Mobile Application",
                 "distractors": [
-                    "VMware Cloud on AWS",
-                    "AWS App Mesh",
-                    "AWS Chatbot"
+                    "AWS Data Pipeline",
+                    "Amazon Connect",
+                    "Amazon EMR"
                 ]
             },
             {
                 "question": "Track, manage, and control licenses",
                 "answer": "AWS License Manager",
                 "distractors": [
-                    "AWS Greengrass",
-                    "AWS IoT Device Defender",
-                    "AWS Trusted Advisor"
+                    "AWS Deep Learning AMIs",
+                    "AWS Cloud9",
+                    "AWS Transfer for SFTP"
                 ]
             },
             {
                 "question": "Web-based user interface",
                 "answer": "AWS Management Console",
                 "distractors": [
-                    "Amazon Elastic Container Registry",
-                    "AWS CodeCommit",
-                    "Amazon GuardDuty"
+                    "Amazon Braket",
+                    "AWS Elemental MediaPackage",
+                    "AWS Service Catalog"
                 ]
             },
             {
                 "question": "Infrastructure operations management for AWS",
                 "answer": "AWS Managed Services",
                 "distractors": [
-                    "Amazon Kinesis Video Streams",
-                    "AWS Elemental Appliances & Software",
-                    "Amazon Quantum Ledger Database (QLDB)"
+                    "AWS Elemental MediaConnect",
+                    "AWS Data Pipeline",
+                    "Amazon WorkMail"
                 ]
             },
             {
                 "question": "Automate Operations with Chef and Puppet",
                 "answer": "AWS OpsWorks",
                 "distractors": [
-                    "Amazon CloudSearch",
+                    "AWS IoT SiteWise",
                     "AWS Data Exchange",
-                    "Amazon Redshift"
+                    "AWS Database Migration Service"
                 ]
             },
             {
                 "question": "Central governance and management across AWS accounts",
                 "answer": "AWS Organizations",
                 "distractors": [
-                    "Amazon Fraud Detector (Preview)",
-                    "Amazon CloudSearch",
-                    "Amazon EMR"
+                    "Amazon Rekognition",
+                    "AWS App Mesh",
+                    "AWS Single Sign-On"
                 ]
             },
             {
                 "question": "Personalized View of AWS Service Health",
                 "answer": "AWS Personal Health Dashboard",
                 "distractors": [
-                    "Amazon Macie",
-                    "Amazon RDS on VMware",
-                    "Amazon EMR"
+                    "AWS Chatbot",
+                    "Amazon WorkDocs",
+                    "Amazon Lex"
                 ]
             },
             {
                 "question": "Create and Use Standardized Products",
                 "answer": "AWS Service Catalog",
                 "distractors": [
-                    "AWS CloudTrail",
-                    "Amazon EC2",
-                    "AWS IoT Events"
+                    "AWS Glue",
+                    "AWS Cost Explorer",
+                    "Apache MXNet on AWS"
                 ]
             },
             {
                 "question": "Gain Operational Insights and Take Action",
                 "answer": "AWS Systems Manager",
                 "distractors": [
-                    "AWS Systems Manager",
-                    "Amazon Elastic Inference",
-                    "Amazon Chime"
+                    "Amazon Rekognition",
+                    "Amazon Sumerian",
+                    "Amazon Elasticsearch Service"
                 ]
             },
             {
                 "question": "Optimize Performance and Security",
                 "answer": "AWS Trusted Advisor",
                 "distractors": [
-                    "AWS Elastic Beanstalk",
-                    "Amazon EMR",
-                    "AWS Data Pipeline"
+                    "Amazon Inspector",
+                    "Amazon Augmented AI",
+                    "Amazon GameLift"
                 ]
             },
             {
                 "question": "Review and improve your workloads",
                 "answer": "AWS Well-Architected Tool",
                 "distractors": [
-                    "Amazon Textract",
-                    "AWS Batch",
-                    "AWS Cloud9"
+                    "AWS Security Hub",
+                    "Amazon Kinesis",
+                    "Amazon DynamoDB"
                 ]
             }
         ],
@@ -1214,81 +1214,81 @@
                 "question": "Easy-to-use Scalable Media Transcoding",
                 "answer": "Amazon Elastic Transcoder",
                 "distractors": [
-                    "Amazon Aurora",
-                    "Amazon Corretto",
-                    "Amazon EC2 Auto Scaling"
+                    "AWS Amplify",
+                    "Amazon Elastic Inference",
+                    "Amazon Kendra"
                 ]
             },
             {
                 "question": "Process and Analyze Video Streams",
                 "answer": "Amazon Kinesis Video Streams",
                 "distractors": [
-                    "Amazon Aurora",
-                    "AWS OpsWorks",
-                    "AWS Snow Family"
+                    "AWS Command Line Interface",
+                    "AWS Application Discovery Service",
+                    "Amazon Athena"
                 ]
             },
             {
                 "question": "Reliable and secure live video transport",
                 "answer": "AWS Elemental MediaConnect",
                 "distractors": [
-                    "AWS Deep Learning AMIs",
-                    "AWS AppSync",
-                    "AWS Identity & Access Management"
+                    "Amazon Fraud Detector (Preview)",
+                    "AWS WAF",
+                    "AWS Budgets"
                 ]
             },
             {
                 "question": "Convert File-based Video Content",
                 "answer": "AWS Elemental MediaConvert",
                 "distractors": [
-                    "Amazon Elastic Container Service",
-                    "Amazon Neptune",
-                    "Amazon Athena"
+                    "AWS CloudFormation",
+                    "AWS DeepRacer",
+                    "AWS Snow Family"
                 ]
             },
             {
                 "question": "Convert Live Video Content",
                 "answer": "AWS Elemental MediaLive",
                 "distractors": [
-                    "AWS Outposts",
-                    "Amazon GuardDuty",
-                    "Amazon SageMaker Ground Truth"
+                    "Amazon Athena",
+                    "AWS CodeBuild",
+                    "Amazon RDS"
                 ]
             },
             {
                 "question": "Video Origination and Packaging",
                 "answer": "AWS Elemental MediaPackage",
                 "distractors": [
-                    "AWS Elemental MediaLive",
-                    "AWS CloudTrail",
-                    "CloudEndure Migration"
+                    "Amazon Comprehend",
+                    "AWS Artifact",
+                    "Amazon Connect"
                 ]
             },
             {
                 "question": "Media Storage and Simple HTTP Origin",
                 "answer": "AWS Elemental MediaStore",
                 "distractors": [
-                    "Amazon Elasticsearch Service",
                     "AWS Data Exchange",
-                    "Amazon Athena"
+                    "Amazon Redshift",
+                    "AWS Transit Gateway"
                 ]
             },
             {
                 "question": "Video Personalization and Monetization",
                 "answer": "AWS Elemental MediaTailor",
                 "distractors": [
-                    "AWS Storage Gateway",
-                    "AWS Step Functions",
-                    "AWS Device Farm"
+                    "Amazon Neptune",
+                    "Amazon Athena",
+                    "AWS Data Pipeline"
                 ]
             },
             {
                 "question": "On-premises media solutions",
                 "answer": "AWS Elemental Appliances & Software",
                 "distractors": [
-                    "Amazon WorkDocs",
-                    "Amazon SageMaker Ground Truth",
-                    "Amazon Augmented AI"
+                    "AWS Console Mobile Application",
+                    "AWS Cost and Usage Report",
+                    "AWS IoT Button"
                 ]
             }
         ],
@@ -1297,72 +1297,72 @@
                 "question": "Track Migrations from a Single Place",
                 "answer": "AWS Migration Hub",
                 "distractors": [
-                    "Amazon WorkDocs",
-                    "AWS AppSync",
-                    "Amazon Connect"
+                    "Amazon GameLift",
+                    "AWS Control Tower",
+                    "AWS CodeStar"
                 ]
             },
             {
                 "question": "Discover On-Premises Applications to Streamline Migration",
                 "answer": "AWS Application Discovery Service",
                 "distractors": [
-                    "AWS AppSync",
-                    "AWS IoT Things Graph",
-                    "AWS CodeCommit"
+                    "Amazon GameLift",
+                    "Amazon Managed Blockchain",
+                    "Amazon QuickSight"
                 ]
             },
             {
                 "question": "Migrate Databases with Minimal Downtime",
                 "answer": "AWS Database Migration Service",
                 "distractors": [
-                    "Amazon Timestream",
-                    "AWS Management Console",
-                    "AWS Data Pipeline"
+                    "AWS Tools and SDKs",
+                    "Savings Plans",
+                    "Amazon Quantum Ledger Database (QLDB)"
                 ]
             },
             {
                 "question": "Simple, fast, online data transfer",
                 "answer": "AWS DataSync",
                 "distractors": [
-                    "Amazon AppSync",
-                    "AWS Migration Hub",
-                    "Amazon API Gateway"
+                    "Amazon API Gateway",
+                    "Amazon Macie",
+                    "AWS DeepLens"
                 ]
             },
             {
                 "question": "Migrate On-Premises Servers to AWS",
                 "answer": "AWS Server Migration Service",
                 "distractors": [
-                    "Amazon Personalize",
-                    "Amazon Inferentia",
-                    "Amazon CloudWatch"
+                    "Amazon EC2",
+                    "AWS AppSync",
+                    "Amazon RDS"
                 ]
             },
             {
                 "question": "Physical devices to migrate data into and out of AWS",
                 "answer": "AWS Snow Family",
                 "distractors": [
-                    "Amazon Transcribe",
-                    "Amazon Simple Storage Service (S3)",
-                    "AWS Lambda"
+                    "Amazon QuickSight",
+                    "Amazon RDS",
+                    "Amazon Augmented AI"
                 ]
             },
             {
                 "question": "Fully managed SFTP service",
                 "answer": "AWS Transfer for SFTP",
                 "distractors": [
-                    "Amazon AppStream 2.0",
-                    "AWS Elemental MediaConvert",
-                    "AWS WAF"
+                    "Amazon RDS on VMware",
+                    "Amazon Lumberyard",
+                    "AWS IoT 1-Click"
                 ]
             },
             {
                 "question": "Automate your mass migration to AWS",
                 "answer": "CloudEndure Migration",
                 "distractors": [
-                    "Amazon WorkDocs",
-                    "Amazon DocumentDB (with MongoDB compatibility)",
-                    "Amazon Sumerian"
+                    "Contact Lens for Amazon Connect",
+                    "Amazon Kinesis",
+                    "AWS Lambda"
                 ]
             }
         ],
@@ -1371,45 +1371,45 @@
                 "question": "Build and deploy mobile and web applications",
                 "answer": "AWS Amplify",
                 "distractors": [
-                    "AWS Step Functions",
-                    "Apache MXNet on AWS",
-                    "AWS Batch"
+                    "AWS IoT SiteWise",
+                    "Amazon Lex",
+                    "AWS Deep Learning AMIs"
                 ]
             },
             {
                 "question": "Build, Deploy, and Manage APIs",
                 "answer": "Amazon API Gateway",
                 "distractors": [
-                    "Amazon Corretto",
-                    "AWS Step Functions",
-                    "Amazon Elasticsearch Service"
+                    "Amazon Polly",
+                    "Amazon Detective",
+                    "Amazon MQ"
                 ]
             },
             {
                 "question": "Personalized User Engagement Across Channels",
                 "answer": "Amazon Pinpoint",
                 "distractors": [
-                    "Amazon FSx for Lustre",
-                    "AWS Elemental Appliances & Software",
-                    "Amazon CloudSearch"
+                    "Amazon FSx for Windows File Server",
+                    "Amazon Simple Queue Service (SQS)",
+                    "Amazon Translate"
                 ]
             },
             {
                 "question": "Power your apps with the right data from many sources, at scale",
                 "answer": "AWS AppSync",
                 "distractors": [
-                    "Amazon Managed Apache Cassandra Service",
-                    "AWS CloudTrail",
-                    "Amazon AppStream 2.0"
+                    "Amazon FreeRTOS",
+                    "Amazon CloudWatch",
+                    "AWS CloudTrail"
                 ]
             },
             {
                 "question": "Test Android, iOS, and web apps on real devices in the AWS cloud",
                 "answer": "AWS Device Farm",
                 "distractors": [
-                    "AWS App Mesh",
-                    "AWS Glue",
-                    "Amazon ElastiCache"
+                    "Amazon Quantum Ledger Database (QLDB)",
+                    "Amazon Athena",
+                    "Amazon Comprehend"
                 ]
             }
         ],
@@ -1418,99 +1418,99 @@
                 "question": "Isolated Cloud Resources",
                 "answer": "Amazon VPC",
                 "distractors": [
-                    "Amazon Elastic Transcoder",
-                    "Elastic Load Balancing",
-                    "Amazon Redshift"
+                    "Amazon EMR",
+                    "AWS CodeCommit",
+                    "Amazon Elastic Kubernetes Service"
                 ]
             },
             {
                 "question": "Build, Deploy, and Manage APIs",
                 "answer": "Amazon API Gateway",
                 "distractors": [
-                    "AWS Identity & Access Management",
-                    "AWS AppSync",
-                    "Amazon SageMaker"
+                    "Amazon Braket",
+                    "AWS IoT 1-Click",
+                    "Apache MXNet on AWS"
                 ]
             },
             {
                 "question": "Global Content Delivery Network",
                 "answer": "Amazon CloudFront",
                 "distractors": [
-                    "AWS Auto Scaling",
-                    "AWS Transit Gateway",
-                    "AWS IoT Device Defender"
+                    "AWS Global Accelerator",
+                    "Amazon Lightsail",
+                    "Amazon CloudSearch"
                 ]
             },
             {
                 "question": "Scalable Domain Name System",
                 "answer": "Amazon Route 53",
                 "distractors": [
-                    "Amazon WorkLink",
-                    "Amazon Detective",
-                    "Amazon EC2 Auto Scaling"
+                    "AWS Device Farm",
+                    "AWS Tools and SDKs",
+                    "Amazon Athena"
                 ]
             },
             {
                 "question": "Securely Access Services Hosted on AWS",
                 "answer": "AWS PrivateLink",
                 "distractors": [
-                    "AWS PrivateLink",
-                    "Amazon EC2 Auto Scaling",
-                    "Amazon Inferentia"
+                    "AWS CodeBuild",
+                    "AWS Amplify",
+                    "AWS RoboMaker"
                 ]
             },
             {
                 "question": "Monitor and control microservices",
                 "answer": "AWS App Mesh",
                 "distractors": [
-                    "Amazon Elastic Block Store (EBS)",
-                    "AWS Application Discovery Service",
-                    "AWS Auto Scaling"
+                    "Amazon RDS on VMware",
+                    "Amazon Quantum Ledger Database (QLDB)",
+                    "AWS Elemental MediaConvert"
                 ]
             },
             {
                 "question": "Application resource registry for microservices",
                 "answer": "AWS Cloud Map",
                 "distractors": [
-                    "AWS IoT 1-Click",
-                    "AWS IoT Device Defender",
-                    "AWS Step Functions"
+                    "AWS Secrets Manager",
+                    "AWS IoT SiteWise",
+                    "AWS Outposts"
                 ]
             },
             {
                 "question": "Dedicated Network Connection to AWS",
                 "answer": "AWS Direct Connect",
                 "distractors": [
-                    "Amazon Sumerian",
-                    "AWS IoT 1-Click",
-                    "Amazon ElastiCache"
+                    "AWS Key Management Service",
+                    "AWS X-Ray",
+                    "Amazon Sumerian"
                 ]
             },
             {
                 "question": "Improve application availability and performance",
                 "answer": "AWS Global Accelerator",
                 "distractors": [
-                    "TensorFlow on AWS",
-                    "AWS Device Farm",
-                    "AWS Elemental MediaConvert"
+                    "Amazon WorkDocs",
+                    "Amazon API Gateway",
+                    "Amazon Polly"
                 ]
             },
             {
                 "question": "Easily scale VPC and account connections",
                 "answer": "AWS Transit Gateway",
                 "distractors": [
-                    "AWS Resource Access Manager",
-                    "AWS Trusted Advisor",
-                    "AWS Transit Gateway"
+                    "AWS Shield",
+                    "AWS DeepRacer",
+                    "AWS Config"
                 ]
             },
             {
                 "question": "Distribute incoming traffic across multiple targets",
                 "answer": "Elastic Load Balancing",
                 "distractors": [
-                    "AWS Elemental MediaStore",
-                    "Alexa for Business",
-                    "AWS Glue"
+                    "AWS Resource Access Manager",
+                    "AWS AppSync",
+                    "Apache MXNet on AWS"
                 ]
             }
         ],
@@ -1519,9 +1519,9 @@
                 "question": "Explore and experiment with quantum computing",
                 "answer": "Amazon Braket",
                 "distractors": [
-                    "AWS Elastic Beanstalk",
-                    "TensorFlow on AWS",
-                    "AWS X-Ray"
+                    "Amazon Elastic Container Registry",
+                    "Amazon Kendra",
+                    "Savings Plans"
                 ]
             }
         ],
@@ -1530,9 +1530,9 @@
                 "question": "Develop, test, and deploy robotics applications",
                 "answer": "AWS RoboMaker",
                 "distractors": [
-                    "Amazon Elastic Kubernetes Service",
-                    "Amazon CloudWatch",
-                    "Amazon Cognito"
+                    "AWS Certificate Manager",
+                    "AWS Command Line Interface",
+                    "Amazon WorkDocs"
                 ]
             }
         ],
@@ -1541,9 +1541,9 @@
                 "question": "Fully managed ground station as a service",
                 "answer": "AWS Ground Station",
                 "distractors": [
-                    "Amazon Managed Apache Cassandra Service",
-                    "Amazon EventBridge",
-                    "AWS IoT Analytics"
+                    "Amazon QuickSight",
+                    "Amazon Augmented AI",
+                    "AWS IoT Device Management"
                 ]
             }
         ],
@@ -1552,180 +1552,180 @@
                 "question": "Develop, test, and deploy robotics applications",
                 "answer": "AWS RoboMaker",
                 "distractors": [
-                    "Amazon Connect",
-                    "AWS Data Pipeline",
-                    "AWS IoT Analytics"
+                    "Amazon Elasticsearch Service",
+                    "Amazon Elastic Kubernetes Service",
+                    "AWS Batch"
                 ]
             },
             {
                 "question": "Fully managed ground station as a service",
                 "answer": "AWS Ground Station",
                 "distractors": [
-                    "Amazon Managed Streaming for Apache Kafka",
-                    "AWS Device Farm",
-                    "Amazon Translate"
+                    "AWS PrivateLink",
+                    "Amazon Detective",
+                    "Amazon API Gateway"
                 ]
             },
             {
                 "question": "Manage User Access and Encryption Keys",
                 "answer": "AWS Identity & Access Management",
                 "distractors": [
-                    "AWS IoT 1-Click",
-                    "AWS Personal Health Dashboard",
-                    "Amazon Braket"
+                    "Amazon GameLift",
+                    "Contact Lens for Amazon Connect",
+                    "AWS Cost and Usage Report"
                 ]
             },
             {
                 "question": "Identity Management for your Apps",
                 "answer": "Amazon Cognito",
                 "distractors": [
-                    "Amazon FSx for Windows File Server",
-                    "Amazon Quantum Ledger Database (QLDB)",
-                    "Amazon FSx for Lustre"
+                    "Amazon SageMaker",
+                    "AWS Elemental MediaPackage",
+                    "Amazon Transcribe"
                 ]
             },
             {
                 "question": "Investigate potential security issues",
                 "answer": "Amazon Detective",
                 "distractors": [
-                    "Amazon EMR",
-                    "AWS Fargate",
-                    "Amazon Simple Storage Service (S3)"
+                    "AWS PrivateLink",
+                    "Amazon Cognito",
+                    "AWS Ground Station"
                 ]
             },
             {
                 "question": "Managed Threat Detection Service",
                 "answer": "Amazon GuardDuty",
                 "distractors": [
-                    "Amazon VPC",
-                    "Amazon ElastiCache",
-                    "Amazon Corretto"
+                    "Amazon EC2",
+                    "Amazon Kinesis Video Streams",
+                    "AWS Cost Explorer"
                 ]
             },
             {
                 "question": "Analyze Application Security",
                 "answer": "Amazon Inspector",
                 "distractors": [
-                    "Amazon Personalize",
-                    "CloudEndure Disaster Recovery",
-                    "Amazon Elastic Container Registry"
+                    "Amazon ElastiCache",
+                    "Savings Plans",
+                    "Amazon Polly"
                 ]
             },
             {
                 "question": "Discover, Classify, and Protect your Data",
                 "answer": "Amazon Macie",
                 "distractors": [
-                    "AWS Config",
-                    "Amazon WorkDocs",
-                    "Amazon Redshift"
+                    "AWS Elemental MediaConnect",
+                    "Amazon Lightsail",
+                    "Amazon Forecast"
                 ]
             },
             {
                 "question": "On-demand access to AWS compliance reports",
                 "answer": "AWS Artifact",
                 "distractors": [
-                    "AWS Security Hub",
-                    "Amazon Chime",
-                    "AWS Application Discovery Service"
+                    "AWS Fargate",
+                    "Amazon QuickSight",
+                    "Amazon SageMaker Ground Truth"
                 ]
             },
             {
                 "question": "Provision, Manage, and Deploy SSL/TLS Certificates",
                 "answer": "AWS Certificate Manager",
                 "distractors": [
-                    "AWS Elemental MediaPackage",
-                    "AWS Cloud Development Kit (CDK)",
-                    "AWS Serverless Application Repository"
+                    "AWS Management Console",
+                    "Amazon Managed Apache Cassandra Service",
+                    "Amazon Lex"
                 ]
             },
             {
                 "question": "Hardware-based Key Storage for Regulatory Compliance",
                 "answer": "AWS CloudHSM",
                 "distractors": [
-                    "AWS Single Sign-On",
-                    "Elastic Load Balancing",
-                    "AWS DeepComposer"
+                    "Amazon Simple Notification Service (SNS)",
+                    "AWS Amplify",
+                    "AWS Config"
                 ]
             },
             {
                 "question": "Host and Manage Active Directory",
                 "answer": "AWS Directory Service",
                 "distractors": [
-                    "AWS Resource Access Manager",
-                    "AWS Firewall Manager",
-                    "AWS CloudTrail"
+                    "AWS Command Line Interface",
+                    "AWS Cost Explorer",
+                    "AWS Systems Manager"
                 ]
             },
             {
                 "question": "Central Management of Firewall Rules",
                 "answer": "AWS Firewall Manager",
                 "distractors": [
-                    "AWS Lambda",
-                    "AWS CodeCommit",
-                    "AWS Auto Scaling"
+                    "AWS Amplify",
+                    "Amazon Athena",
+                    "AWS Data Pipeline"
                 ]
             },
             {
                 "question": "Managed Creation and Control of Encryption Keys",
                 "answer": "AWS Key Management Service",
                 "distractors": [
-                    "AWS Secrets Manager",
-                    "Amazon EMR",
-                    "Amazon FSx for Windows File Server"
+                    "CloudEndure Disaster Recovery",
+                    "AWS Deep Learning Containers",
+                    "Amazon Aurora"
                 ]
             },
             {
                 "question": "Simple, secure service to share AWS resources",
                 "answer": "AWS Resource Access Manager",
                 "distractors": [
-                    "AWS Trusted Advisor",
-                    "Amazon Kendra",
-                    "AWS Elemental MediaConvert"
+                    "AWS Database Migration Service",
+                    "Elastic Load Balancing",
+                    "Amazon QuickSight"
                 ]
             },
             {
                 "question": "Rotate, Manage, and Retrieve Secrets",
                 "answer": "AWS Secrets Manager",
                 "distractors": [
-                    "AWS App Mesh",
-                    "AWS Database Migration Service",
-                    "AWS Trusted Advisor"
+                    "Amazon EC2",
+                    "AWS Data Exchange",
+                    "Amazon Pinpoint"
                 ]
             },
             {
                 "question": "Unified security and compliance center",
                 "answer": "AWS Security Hub",
                 "distractors": [
-                    "AWS Lambda",
-                    "AWS Device Farm",
-                    "AWS IoT Events"
+                    "Amazon Inspector",
+                    "AWS IoT SiteWise",
+                    "Amazon Elastic Kubernetes Service"
                 ]
             },
             {
                 "question": "DDoS Protection",
                 "answer": "AWS Shield",
                 "distractors": [
-                    "AWS Wavelength",
-                    "Amazon API Gateway",
-                    "Amazon Lex"
+                    "Amazon RDS",
+                    "Amazon Kinesis",
+                    "Amazon Managed Blockchain"
                 ]
             },
             {
                 "question": "Cloud Single Sign-On (SSO) Service",
                 "answer": "AWS Single Sign-On",
                 "distractors": [
-                    "AWS Directory Service",
-                    "Amazon Quantum Ledger Database (QLDB)",
-                    "Amazon ElastiCache"
+                    "Amazon Athena",
+                    "Amazon CloudSearch",
+                    "Reserved Instance Reporting"
                 ]
             },
             {
                 "question": "Filter Malicious Web Traffic",
                 "answer": "AWS WAF",
                 "distractors": [
-                    "AWS Batch",
-                    "AWS CloudTrail",
-                    "AWS Data Exchange"
+                    "Amazon Braket",
+                    "Amazon Athena",
+                    "AWS CodeDeploy"
                 ]
             }
         ],
@@ -1734,207 +1734,207 @@
                 "question": "Scalable Storage in the Cloud",
                 "answer": "Amazon Simple Storage Service (S3)",
                 "distractors": [
-                    "Amazon Elasticsearch Service",
-                    "Amazon App Mesh",
-                    "Amazon Cognito"
+                    "AWS WAF",
+                    "AWS Compute Optimizer",
+                    "AWS DeepLens"
                 ]
             },
             {
                 "question": "EC2 block storage volumes",
                 "answer": "Amazon Elastic Block Store (EBS)",
                 "distractors": [
-                    "AWS IoT Button",
-                    "AWS Identity & Access Management",
-                    "Amazon Translate"
+                    "AWS Transit Gateway",
+                    "Amazon Sumerian",
+                    "Amazon EC2"
                 ]
             },
             {
                 "question": "Fully managed file system for EC2",
                 "answer": "Amazon Elastic File System (EFS)",
                 "distractors": [
-                    "Amazon EventBridge",
-                    "Amazon Transcribe",
-                    "AWS Elemental MediaTailor"
+                    "Amazon Elastic Kubernetes Service",
+                    "Amazon Corretto",
+                    "Amazon Aurora"
                 ]
             },
             {
                 "question": "High-performance file system integrated with S3",
                 "answer": "Amazon FSx for Lustre",
                 "distractors": [
-                    "AWS Service Catalog",
                     "AWS Ground Station",
-                    "Amazon Translate"
+                    "AWS IoT SiteWise",
+                    "Amazon Kendra"
                 ]
             },
             {
                 "question": "Fully managed Windows native file system",
                 "answer": "Amazon FSx for Windows File Server",
                 "distractors": [
-                    "Amazon Cognito",
-                    "Amazon Elastic Inference",
-                    "AWS Control Tower"
+                    "Amazon Elastic Container Service",
+                    "AWS Certificate Manager",
+                    "AWS Chatbot"
                 ]
             },
             {
                 "question": "Low-cost Archive Storage in the Cloud",
                 "answer": "Amazon S3 Glacier",
                 "distractors": [
-                    "AWS Chatbot",
-                    "Amazon Elastic Transcoder",
-                    "Amazon GameLift"
+                    "Amazon WorkMail",
+                    "AWS Budgets",
+                    "AWS IoT 1-Click"
                 ]
             },
             {
                 "question": "Centralized backup across AWS services",
                 "answer": "AWS Backup",
                 "distractors": [
-                    "AWS App Mesh",
-                    "Amazon Personalize",
-                    "Amazon Elasticsearch Service"
+                    "Amazon EC2 Auto Scaling",
+                    "Amazon FSx for Lustre",
+                    "AWS DeepLens"
                 ]
             },
             {
                 "question": "Physical devices to migrate data into and out of AWS",
                 "answer": "AWS Snow Family",
                 "distractors": [
-                    "Amazon Transcribe",
-                    "AWS Backup",
-                    "Amazon Rekognition"
+                    "AWS Direct Connect",
+                    "AWS Partner Device Catalog",
+                    "Amazon Polly"
                 ]
             },
             {
                 "question": "Hybrid Storage Integration",
                 "answer": "AWS Storage Gateway",
                 "distractors": [
-                    "AWS Glue",
-                    "AWS Cost and Usage Report",
-                    "AWS DeepComposer"
+                    "Apache MXNet on AWS",
+                    "Amazon Inferentia",
+                    "AWS Snow Family"
                 ]
             },
             {
                 "question": "Highly automated disaster recovery",
                 "answer": "CloudEndure Disaster Recovery",
                 "distractors": [
-                    "AWS Shield",
-                    "Amazon Detective",
-                    "AWS Ground Station"
+                    "Amazon Transcribe",
+                    "Amazon Quantum Ledger Database (QLDB)",
+                    "AWS Data Pipeline"
                 ]
             },
             {
                 "question": "Fully managed Apache Kafka service",
                 "answer": "Amazon Managed Streaming for Apache Kafka",
                 "distractors": [
-                    "Amazon Quantum Ledger Database (QLDB)",
-                    "Amazon Neptune",
-                    "AWS Fargate"
+                    "Amazon QuickSight",
+                    "AWS Wavelength",
+                    "Amazon Connect"
                 ]
             },
             {
                 "question": "Fast, Simple, Cost-effective Data Warehousing",
                 "answer": "Amazon Redshift",
                 "distractors": [
-                    "Amazon DynamoDB",
-                    "AWS Service Catalog",
-                    "Amazon Sumerian"
+                    "AWS Managed Services",
+                    "Amazon Timestream",
+                    "AWS Cost and Usage Report"
                 ]
             },
             {
                 "question": "Fast Business Analytics Service",
                 "answer": "Amazon QuickSight",
                 "distractors": [
-                    "AWS Backup",
-                    "AWS IoT Analytics",
-                    "Amazon Elastic Kubernetes Service"
+                    "AWS License Manager",
+                    "AWS Command Line Interface",
+                    "Amazon EMR"
                 ]
             },
             {
                 "question": "Find, subscribe to, and use third-party data in the cloud",
                 "answer": "AWS Data Exchange",
                 "distractors": [
-                    "Amazon Comprehend",
-                    "Amazon Elastic Block Store (EBS)",
-                    "Amazon Neptune"
+                    "Amazon Quantum Ledger Database (QLDB)",
+                    "AWS Fargate",
+                    "AWS Config"
                 ]
             },
             {
                 "question": "Orchestration Service for Periodic, Data-driven Workflows",
                 "answer": "AWS Data Pipeline",
                 "distractors": [
-                    "Amazon Simple Notification Service (SNS)",
-                    "Amazon Managed Blockchain",
-                    "AWS Data Exchange"
+                    "AWS DeepComposer",
+                    "Amazon Connect",
+                    "AWS Device Farm"
                 ]
             },
             {
                 "question": "Prepare and Load Data",
                 "answer": "AWS Glue",
                 "distractors": [
-                    "Amazon WorkSpaces",
-                    "AWS Single Sign-On",
-                    "AWS DeepComposer"
+                    "Amazon Elasticsearch Service",
+                    "AWS Control Tower",
+                    "Amazon Quantum Ledger Database (QLDB)"
                 ]
             },
             {
                 "question": "Build a secure data lake in days",
                 "answer": "AWS Lake Formation",
                 "distractors": [
-                    "AWS Elemental MediaConnect",
-                    "Amazon Braket",
-                    "AWS IoT 1-Click"
+                    "Amazon RDS",
+                    "AWS Cost Explorer",
+                    "AWS Server Migration Service"
                 ]
             },
             {
                 "question": "Coordinate Distributed Applications",
                 "answer": "AWS Step Functions",
                 "distractors": [
-                    "Amazon Pinpoint",
-                    "Amazon Pinpoint",
-                    "Amazon WorkDocs"
+                    "Amazon Elasticsearch Service",
+                    "Amazon Augmented AI",
+                    "Amazon RDS on VMware"
                 ]
             },
             {
                 "question": "Serverless event bus for SaaS apps & AWS services",
                 "answer": "Amazon EventBridge",
                 "distractors": [
-                    "Amazon DynamoDB",
-                    "AWS Snow Family",
-                    "AWS Snow Family"
+                    "AWS DeepRacer",
+                    "AWS IoT Analytics",
+                    "Amazon RDS on VMware"
                 ]
             },
             {
                 "question": "Managed Message Broker for ActiveMQ",
                 "answer": "Amazon MQ",
                 "distractors": [
-                    "Amazon Transcribe",
-                    "Amazon S3 Glacier",
-                    "Amazon AppSync"
+                    "AWS CodeDeploy",
+                    "Amazon Kinesis Video Streams",
+                    "AWS Elemental MediaPackage"
                 ]
             },
             {
                 "question": "Pub/Sub, Mobile Push and SMS",
                 "answer": "Amazon Simple Notification Service (SNS)",
                 "distractors": [
-                    "Amazon MQ",
-                    "Amazon Elastic Block Store (EBS)",
-                    "AWS Greengrass"
+                    "Amazon QuickSight",
+                    "AWS CodeBuild",
+                    "AWS Data Pipeline"
                 ]
             },
             {
                 "question": "Managed Message Queues",
                 "answer": "Amazon Simple Queue Service (SQS)",
                 "distractors": [
-                    "AWS IoT Events",
-                    "Amazon WorkLink",
-                    "Amazon DynamoDB"
+                    "Amazon S3 Glacier",
+                    "AWS Elemental MediaStore",
+                    "AWS License Manager"
                 ]
             },
             {
                 "question": "Power your apps with the right data from many sources, at scale",
                 "answer": "Amazon AppSync",
                 "distractors": [
-                    "Amazon GuardDuty",
-                    "AWS IoT Device Management",
-                    "AWS Migration Hub"
+                    "Amazon Elasticsearch Service",
+                    "Amazon API Gateway",
+                    "Amazon AppStream 2.0"
                 ]
             }
         ]

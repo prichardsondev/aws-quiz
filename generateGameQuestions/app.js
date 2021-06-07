@@ -8,14 +8,12 @@ var catagories =  {
 //if someone fixes this ugly mess share with me -)
 fs.readFile('aws.txt', 'utf8',  (err, data) => {
     let line = data.split('\n\r');
-    let obj = {}
     let questionArray = [];
     let distractorList = getDistractorList(line);
     let catagory;
     line.forEach((d) => {
         let words = d.split(" ");
         if(words[0].includes('.')) {
-            obj = {};
             catagory = words.splice(1).join('_');
             catagory = catagory.replace(/(\r\n|\n|\r)/gm, "").toLowerCase();
             catagories.catagory[catagory] = [];
@@ -39,10 +37,10 @@ fs.readFile('aws.txt', 'utf8',  (err, data) => {
     //console.log(JSON.stringify(catagories,null,4));
 })
 
-//note I'm lazy and didn't create list of distractors
-//guaranteed to not have answer in it -)
+
 let buildDistractors = (answer, distractorList) => {
-    return distractorList.sort(() => .5 - Math.random()).slice(0,3);
+    let answerRemoved = distractorList.filter(d=>d!==answer);
+    return answerRemoved.sort(() => .5 - Math.random()).slice(0,3);
 };
 
 let getDistractorList = (data) => {
