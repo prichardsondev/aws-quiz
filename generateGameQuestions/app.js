@@ -5,7 +5,7 @@ var catagories =  {
     }
 }
 
-//if some fixes this ugly mess share with me -)
+//if someone fixes this ugly mess share with me -)
 fs.readFile('aws.txt', 'utf8',  (err, data) => {
     let line = data.split('\n\r');
     let obj = {}
