@@ -11,9 +11,8 @@ fs.readFile('aws.txt', 'utf8',  (err, data) => {
     let obj = {}
     let questionArray = [];
     let distractorList = getDistractorList(line);
-    console.log(distractorList);
     let catagory;
-    line.forEach((d,i,a) => {
+    line.forEach((d) => {
         let words = d.split(" ");
         if(words[0].includes('.')) {
             obj = {};
@@ -23,7 +22,7 @@ fs.readFile('aws.txt', 'utf8',  (err, data) => {
             questionArray = [];
         }
         else {
-            words.forEach((word,i,arr) => {
+            words.forEach((word,i) => {
                 if(word.includes(':')) {
                     let answer = words.splice(0,i+1).join(' ').slice(0,-1).trim();
                     let question = words.join(' ').replace(/(\r\n|\n|\r)/gm, "");
@@ -36,7 +35,7 @@ fs.readFile('aws.txt', 'utf8',  (err, data) => {
         catagories.catagory[catagory] = questionArray;
         
     });
-    fs.writeFileSync('./sampleFormat.json',JSON.stringify(catagories,null,4));
+    fs.writeFileSync('./aws.json',JSON.stringify(catagories,null,4));
     //console.log(JSON.stringify(catagories,null,4));
 })
 

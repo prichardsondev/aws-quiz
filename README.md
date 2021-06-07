@@ -38,15 +38,15 @@ http://localhost:3000/learn/:catagory <br/>
 
 body<br/>
 ```javascript 
-            {
-                "question": "Fully managed ground station as a service",
-                "answer": "AWS Ground Station",
-                "distractors": [
-                    "Amazon Managed Streaming for Apache Kafka",
-                    "AWS Device Farm",
-                    "Amazon Translate"
-                ]
-            },
+    {
+        "question": "Fully managed ground station as a service",
+        "answer": "AWS Ground Station",
+        "distractors": [
+            "Amazon Managed Streaming for Apache Kafka",
+            "AWS Device Farm",
+            "Amazon Translate"
+        ]
+    }
 ```
 
 #### frontend
@@ -62,3 +62,14 @@ npm install
 npm start
 
 follow simple game at localhost:4000
+
+
+### generateGameQuestions
+
+#### Files:
+aws.txt - file holding questions<br/>
+aws.json - json format created by app.js. used for backend as services.json<br/>
+app.js - parses aws.txt -> creates aws.json
+
+list of services to create aws.txt copied from<br/>
+https://www.techradar.com/news/aws
