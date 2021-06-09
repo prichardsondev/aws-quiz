@@ -111,7 +111,7 @@ choices.forEach((choice) => {
 function showToast(correctAnswer) {
     console.log('toast');
     console.log(correctAnswer, typeof(correctAnswer));
-    var x = document.getElementById("toast");
+    const x = document.getElementById("toast");
     x.className = "show";
     let letterAnswer;
     if(correctAnswer===1){

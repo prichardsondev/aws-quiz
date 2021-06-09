@@ -8,6 +8,7 @@ const controller = {
       let body = req.body;
       let catagory = req.params.catagory;
       //validate...
+      console.log("body:", body);
       if (body && catagory) {
         await service.putQuestion(body,catagory);
         res.sendStatus(201);

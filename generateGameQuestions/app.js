@@ -1,6 +1,6 @@
-var fs = require('fs')
+const fs = require('fs')
 
-var catagories =  {
+let catagories =  {
     "catagory": {
     }
 }

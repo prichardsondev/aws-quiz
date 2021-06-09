@@ -90,7 +90,10 @@
                     "Amazon Elastic Kubernetes Service",
                     "AWS Well-Architected Tool"
                 ]
-            }
+            },
+            {},
+            {},
+            {}
         ],
         "application_integration": [
             {
