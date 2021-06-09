@@ -7,12 +7,12 @@ let catagories =  {
 
 //if someone fixes this ugly mess share with me -)
 fs.readFile('aws.txt', 'utf8',  (err, data) => {
-    let line = data.split('\n\r');
+    let lines = data.split('\n\r');
     let questionArray = [];
-    let distractorList = getDistractorList(line);
+    let distractorList = getDistractorList(lines);
     let catagory;
-    line.forEach((d) => {
-        let words = d.split(" ");
+    lines.forEach((line) => {
+        let words = line.split(" ");
         if(words[0].includes('.')) {
             catagory = words.splice(1).join('_');
             catagory = catagory.replace(/(\r\n|\n|\r)/gm, "").toLowerCase();
@@ -31,12 +31,10 @@ fs.readFile('aws.txt', 'utf8',  (err, data) => {
             });
         }
         catagories.catagory[catagory] = questionArray;
-        
     });
     fs.writeFileSync('./aws.json',JSON.stringify(catagories,null,4));
     //console.log(JSON.stringify(catagories,null,4));
-})
-
+});
 
 let buildDistractors = (answer, distractorList) => {
     let answerRemoved = distractorList.filter(d=>d!==answer);

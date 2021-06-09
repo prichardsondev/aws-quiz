@@ -35,6 +35,7 @@ function loadCatagories () {
     let select = document.getElementById('catagories');
     let options = getCatagories().map(catagory =>`<option value=${catagory}>${catagory}</option>`).join('\n');
     select.innerHTML = options;
+    
 }
 
 function setCatagory() { 
@@ -42,3 +43,4 @@ function setCatagory() {
 }
 
 loadCatagories();
+setCatagory();
