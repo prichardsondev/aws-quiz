@@ -86,5 +86,8 @@ aws.txt - list of AWS services and descriptions by catagory<br/>
 aws.json - json format created by app.js. used for backend as services.json<br/>
 app.js - parses aws.txt -> creates aws.json
 
-list of services to create aws.txt copied from<br/>
+list of services to create aws.json copied from<br/>
 https://www.techradar.com/news/aws
+
+list of acronyms to create awsacronyms.json copied from<br/>
+https://geekflare.com/about/
