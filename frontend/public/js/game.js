@@ -12,12 +12,15 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
+let savedResults = {};
+let questionIndex;
 
 let questions = [];
 let url = `http://localhost:3000/learn/${localStorage.getItem("currentCatagory")}`
 fetch(url)
     .then(res =>  res.json())
     .then((loadedQuestions) => {
+        localStorage.removeItem('savedResults')
         questions = loadedQuestions.map(loadedQuestion => {
             const formattedQuestion = {
                 question:loadedQuestion.question,
@@ -70,9 +73,11 @@ getNewQuestion = () => {
     questionCounter++;
     questionCounterText.innerHTML = `${questionCounter}/${maxQuestions}`;
 
-    const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+    questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
     question.innerText = currentQuestion.question;
+
+    savedResults[questionIndex] = currentQuestion
 
     choices.forEach((choice) => {
         const number = choice.dataset['number'];
@@ -94,6 +99,9 @@ choices.forEach((choice) => {
         const classToApply = selectedAnswer==currentQuestion.answer?"correct":"incorrect";
 
         selectedAnswer!=currentQuestion.answer?showToast(currentQuestion.answer):null;
+
+        savedResults[questionIndex]['selectedAnswer'] = selectedAnswer
+        localStorage.setItem("savedResults", JSON.stringify(savedResults))
 
         scoreText.innerText = classToApply==='correct'?(score+=CORRECT_BONUS):score;
 
