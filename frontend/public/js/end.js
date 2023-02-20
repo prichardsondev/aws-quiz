@@ -46,7 +46,7 @@ showResults = () => {
 hideResults = () => {
     resultsBox.style.display = "none";
     container.style.display = "block";
-    document.getElementById("items").innerHTML = "";
+    document.getElementById("results").innerHTML = "";
 }
 
 const renderResults = () => {
@@ -71,5 +71,3 @@ const renderResults = () => {
         document.getElementById("results").appendChild(list)
     }
 }
-
-renderResults()

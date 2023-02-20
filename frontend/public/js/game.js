@@ -77,7 +77,7 @@ getNewQuestion = () => {
     currentQuestion = availableQuesions[questionIndex];
     question.innerText = currentQuestion.question;
 
-    savedResults[questionIndex] = currentQuestion
+    savedResults[questionCounter] = currentQuestion
 
     choices.forEach((choice) => {
         const number = choice.dataset['number'];
@@ -100,7 +100,7 @@ choices.forEach((choice) => {
 
         selectedAnswer!=currentQuestion.answer?showToast(currentQuestion.answer):null;
 
-        savedResults[questionIndex]['selectedAnswer'] = selectedAnswer
+        savedResults[questionCounter]['selectedAnswer'] = selectedAnswer
         localStorage.setItem("savedResults", JSON.stringify(savedResults))
 
         scoreText.innerText = classToApply==='correct'?(score+=CORRECT_BONUS):score;
