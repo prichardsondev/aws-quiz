@@ -253,18 +253,18 @@ white-space: nowrap;
   padding: 0px 0px 10px 0px;
 }
 
-.red {
+.correctAnswer {
   color: red;
 }
 
-.green {
+.incorrectAnswer {
   color: green;
 }
 
-.goBack {
+.goBackButton {
   padding: 30px;
 }
 
-.goBack > a {
+.goBackButton > a {
   padding: 10px;
 }

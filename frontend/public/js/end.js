@@ -57,7 +57,7 @@ const renderResults = () => {
         const row = savedResults[key]
         const item = `
             <ol>
-                <p class="savedQuestion ${row.answer === +row.selectedAnswer ? 'green' : 'red'}">${savedResults[key].question}</p>
+                <p class="savedQuestion ${row.answer === +row.selectedAnswer ? 'correctAnswer' : 'incorrectAnswer'}">${savedResults[key].question}</p>
                 <li>${savedResults[key].choice1}</li>
                 <li>${savedResults[key].choice2}</li>
                 <li>${savedResults[key].choice3}</li>
