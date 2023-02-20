@@ -250,6 +250,7 @@ white-space: nowrap;
 .savedQuestion {
   font-size: 20px;
   font-weight: bold;
+  padding: 0px 0px 10px 0px;
 }
 
 .red {
