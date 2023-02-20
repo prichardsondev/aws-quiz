@@ -241,7 +241,8 @@ white-space: nowrap;
 }
 
 #savedResults {
-  display: none; padding: 30px;
+  display: none;
+  padding: 30px;
 }
 
 .goBack {
