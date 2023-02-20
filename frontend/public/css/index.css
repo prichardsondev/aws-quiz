@@ -240,3 +240,14 @@ white-space: nowrap;
   to {bottom: 60px; opacity: 0;}
 }
 
+#savedResults {
+  display: none; padding: 30px;
+}
+
+.goBack {
+  padding: 30px;
+}
+
+.goBack > a {
+  padding: 10px;
+}
