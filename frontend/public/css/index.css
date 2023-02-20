@@ -254,11 +254,11 @@ white-space: nowrap;
 }
 
 .correctAnswer {
-  color: red;
+  color: green;
 }
 
 .incorrectAnswer {
-  color: green;
+  color: red;
 }
 
 .goBackButton {
