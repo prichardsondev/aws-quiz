@@ -240,3 +240,31 @@ white-space: nowrap;
   to {bottom: 60px; opacity: 0;}
 }
 
+#savedResults {
+  display: none;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.savedQuestion {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px 0px 10px 0px;
+}
+
+.correctAnswer {
+  color: green;
+}
+
+.incorrectAnswer {
+  color: red;
+}
+
+.goBackButton {
+  padding: 30px;
+}
+
+.goBackButton > a {
+  padding: 10px;
+}
