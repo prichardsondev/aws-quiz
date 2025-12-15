@@ -1,7 +1,7 @@
 cat > .github/workflows/deploy-pi.yml <<'YAML'
 name: Deploy aws-quiz to Pi
 
-on:
+'on':
   push:
     branches: [ "main" ]
 
