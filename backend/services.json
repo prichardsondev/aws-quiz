@@ -99,8 +99,7 @@
           "AWS Glue",
           "Amazon Personalize"
         ]
-      }
-      ,
+      },
       {
         "question": "Serverless data integration service",
         "answer": "Amazon AppFlow",
@@ -291,7 +290,6 @@
           "AWS Elemental Appliances & Software"
         ]
       },
-
       {
         "question": "Build, deploy, and manage GraphQL APIs",
         "answer": "AWS AppSync",
@@ -311,7 +309,6 @@
         ]
       }
     ],
-
     "aws_cost_management": [
       {
         "question": "Analyze Your AWS Cost and Usage",
@@ -1619,7 +1616,6 @@
           "AWS Data Exchange"
         ]
       },
-
       {
         "question": "Test Android, iOS, and web apps on real devices in the AWS cloud",
         "answer": "AWS Device Farm",
@@ -1809,7 +1805,6 @@
         ]
       }
     ],
-
     "security_and_compliance": [
       {
         "question": "Manage User Access and Encryption Keys",
@@ -2200,7 +2195,6 @@
           "Amazon Lumberyard"
         ]
       }
-      
     ],
     "messaging_and_eventing": [
       {
@@ -2325,1211 +2319,171 @@
         ]
       }
     ],
-    "acronyms": [
+    "generative_ai": [
       {
-        "question": "AWS",
-        "answer": "Amazon Web Services ",
+        "question": "Train, tune, and deploy machine learning models at scale",
+        "answer": "Amazon SageMaker",
         "distractors": [
-          "Adapter Workflow Socket ",
-          "Array Workflow Security ",
-          "Authentication Web Service "
+          "AWS Lambda",
+          "Amazon Textract",
+          "AWS AppSync"
         ]
       },
       {
-        "question": "Amazon ES",
-        "answer": "Amazon OpenSearch Service ",
+        "question": "AWS chip designed for high-performance AI model training",
+        "answer": "AWS Trainium (Trainium2)",
         "distractors": [
-          "Automation Encryption Secure ",
-          "Access Encryption Services ",
-          "Access Extensions System "
+          "AWS Inferentia2",
+          "Amazon Kinesis",
+          "Amazon Aurora"
         ]
       },
       {
-        "question": "AMI",
-        "answer": "Amazon Machine Image ",
+        "question": "AWS chip optimized for deep learning inference workloads",
+        "answer": "AWS Inferentia2",
         "distractors": [
-          "Array Module Interface ",
-          "Application Markup Inter-Domain ",
-          "Attack MapReduce Image "
+          "AWS Trainium (Trainium2)",
+          "Amazon Redshift",
+          "AWS Wavelength"
         ]
       },
       {
-        "question": "API",
-        "answer": "Application Programming Interface ",
+        "question": "Multimodal foundation model accessible via Amazon Bedrock",
+        "answer": "Amazon Titan",
         "distractors": [
-          "Analytics Private Image ",
-          "Automation Program Interface ",
-          "Array Platform Independent "
+          "Amazon Neptune",
+          "Amazon Rekognition",
+          "AWS Snowcone"
         ]
       },
       {
-        "question": "AI",
-        "answer": "Artificial Intelligence ",
+        "question": "AI assistant for writing code, querying data, and using AWS services",
+        "answer": "Amazon CodeWhisperer",
         "distractors": [
-          "Adapter Independent ",
-          "Address Indication ",
-          "Amazon Image "
+          "AWS Copilot",
+          "Amazon WorkDocs",
+          "Amazon Translate"
         ]
       },
       {
-        "question": "ACL",
-        "answer": "Access Control List ",
+        "question": "Automate code reviews and identify expensive lines of code",
+        "answer": "Amazon CodeGuru",
         "distractors": [
-          "Authentication Capacity Line ",
-          "Amazon Check Live ",
-          "Amazon Compute Layer "
+          "Amazon Lex",
+          "AWS Cloud9",
+          "Amazon Comprehend"
         ]
       },
       {
-        "question": "ALB",
-        "answer": "Application Load Balancer ",
+        "question": "Fully managed service for foundation models from multiple providers",
+        "answer": "Amazon Bedrock",
         "distractors": [
-          "Adapter Load Balancer ",
-          "Amazon License Balancer ",
-          "Attack Load Balancing "
+          "Amazon SageMaker",
+          "AWS Lambda",
+          "Amazon Comprehend"
         ]
       },
       {
-        "question": "ARN",
-        "answer": "Amazon Resource Name ",
+        "question": "AI assistant for AWS services and cloud operations",
+        "answer": "Amazon Q Business",
         "distractors": [
-          "Amazon Redundancy Network ",
-          "Assertion Resource Notation ",
-          "Authority Resource Network "
+          "AWS Chatbot",
+          "Amazon Lex",
+          "Amazon CodeWhisperer"
         ]
       },
       {
-        "question": "AZ",
-        "answer": "Availability Zone ",
+        "question": "AI service for medical transcription and documentation",
+        "answer": "AWS HealthScribe",
         "distractors": [
-          "Agreement Zone ",
-          "Assertion Zone ",
-          "Assertion Zone "
+          "Amazon Transcribe",
+          "Amazon Comprehend Medical",
+          "AWS HealthLake"
         ]
       },
       {
-        "question": "ACM",
-        "answer": "AWS Certificate Management ",
+        "question": "AI-powered call center analytics service",
+        "answer": "Amazon Transcribe Call Analytics",
         "distractors": [
-          "Amazon Client Machine ",
-          "Access Container Machine ",
-          "Automation Control Machine "
+          "Amazon Connect",
+          "Amazon Lex",
+          "Contact Lens for Amazon Connect"
         ]
-      },
-      {
-        "question": "ASG",
-        "answer": "Auto Scaling Group ",
-        "distractors": [
-          "Amazon Second Gateway ",
-          "Agreement System Group ",
-          "Access System Group "
-        ]
-      },
-      {
-        "question": "AES",
-        "answer": "Advanced Encryption Standard",
-        "distractors": [
-          "Adapter Extensions Services ",
-          "Adapter Encryption Storage ",
-          "Access Extensions Service "
-        ]
-      },
-      {
-        "question": "ADFS",
-        "answer": "Active Directory Federation Service ",
-        "distractors": [
-          "Assertion Database File Store ",
-          "Attack Directory First Service ",
-          "Access Disk File S3 "
-        ]
-      },
-      {
-        "question": "AVX",
-        "answer": "Advanced Vector Extensions (AVX/AVX-512)",
-        "distractors": [
-          "Adapter Virtual Encryption ",
-          "Application Virtual Encryption ",
-          "Authority Virtual Encryption "
-        ]
-      },
-      {
-        "question": "BYOL",
-        "answer": "Bring Your Own License ",
-        "distractors": [
-          "Block Your Of Load ",
-          "Balancer Your Own List ",
-          "Balancer Your Of List "
-        ]
-      },
-      {
-        "question": "CDN",
-        "answer": "Content Delivery Network ",
-        "distractors": [
-          "Class Data Name ",
-          "Compute Denial Network ",
-          "Container Desktop Network "
-        ]
-      },
-      {
-        "question": "CRC",
-        "answer": "Cyclic Redundancy Check ",
-        "distractors": [
-          "Certificate Resource Compute ",
-          "Compute Routing Control ",
-          "Compute Resource Cloud "
-        ]
-      },
-      {
-        "question": "CLI",
-        "answer": "Command Line Interface ",
-        "distractors": [
-          "Container Layer Initiative ",
-          "Cloud List Integration/Continuous ",
-          "Compute Layer Indication "
-        ]
-      },
-      {
-        "question": "CIDR",
-        "answer": "Classless Inter-Domain Routing ",
-        "distractors": [
-          "Container Interface Redundancy ",
-          "Capacity IP Resource ",
-          "Compute Integration/Continuous Reliable "
-        ]
-      },
-      {
-        "question": "CORS",
-        "answer": "Cross Origin Resource Sharing ",
-        "distractors": [
-          "Container Object Resource System ",
-          "Container Origin Resource Service ",
-          "Check Own Registry Server "
-        ]
-      },
-      {
-        "question": "CRR",
-        "answer": "Cross Region Replication ",
-        "distractors": [
-          "Control Region Resource ",
-          "Capacity Repository Repository ",
-          "Control Replication Replication "
-        ]
-      },
-      {
-        "question": "CI/CD",
-        "answer": "Continuous Integration/Continuous Deployment ",
-        "distractors": [
-          "Control Interface Datagrams ",
-          "Computer Interface Denial ",
-          "Check Inter-Domain Disk "
-        ]
-      },
-      {
-        "question": "DMS",
-        "answer": "Database Migration Service ",
-        "distractors": [
-          "Directory Machine Sign-On ",
-          "Delivery Memory S3 ",
-          "Directory Machine Scaling "
-        ]
-      },
-      {
-        "question": "DNS",
-        "answer": "Domain Name System ",
-        "distractors": [
-          "Database Network Socket ",
-          "Datagrams Network Storage ",
-          "Directory Name Service "
-        ]
-      },
-      {
-        "question": "DDoS",
-        "answer": "Distributed Denial of Service ",
-        "distractors": [
-          "Design Data S3 ",
-          "Data Design Second ",
-          "Deployment Disk Storage "
-        ]
-      },
-      {
-        "question": "DoS",
-        "answer": "Denial of Service ",
-        "distractors": [
-          "Denial Service ",
-          "Development Second ",
-          "Deployment Storage "
-        ]
-      },
-      {
-        "question": "DaaS",
-        "answer": "Desktop as-a-Service ",
-        "distractors": [
-          "Design as-a-Service ",
-          "Disk as-a-Service ",
-          "Disk as-a-Service "
-        ]
-      },
-      {
-        "question": "EC2",
-        "answer": "Elastic Compute Cloud ",
-        "distractors": [
-          "Encryption Control Cloud ",
-          "Email Cloud Client ",
-          "Email Compute Control "
-        ]
-      },
-      {
-        "question": "ECS",
-        "answer": "EC2 Container Service ",
-        "distractors": [
-          "Email Control Security ",
-          "Encryption Container Side ",
-          "Encryption Capacity System "
-        ]
-      },
-      {
-        "question": "ECR",
-        "answer": "Elastic Container Registry ",
-        "distractors": [
-          "Encryption Certificate Resource ",
-          "Emulator Check Redundancy ",
-          "Emulator Cloud Reliable "
-        ]
-      },
-      {
-        "question": "EFS",
-        "answer": "Elastic File System ",
-        "distractors": [
-          "Extensions Firewall Service ",
-          "Encryption Fabric System ",
-          "Encryption First System "
-        ]
-      },
-      {
-        "question": "EI",
-        "answer": "Elastic Inference ",
-        "distractors": [
-          "Encryption Interface ",
-          "Express Interface ",
-          "Encryption Inference "
-        ]
-      },
-      {
-        "question": "ENA",
-        "answer": "Elastic Network Adapter ",
-        "distractors": [
-          "Encryption Network Array ",
-          "Encryption Network Access ",
-          "Express Name Access "
-        ]
-      },
-      {
-        "question": "EKS",
-        "answer": "Elastic Kubernetes Service ",
-        "distractors": [
-          "Extensions Kit Service ",
-          "Encryption Kubernetes Service ",
-          "Encryption Kit Service "
-        ]
-      },
-      {
-        "question": "EBS",
-        "answer": "Elastic Block Store ",
-        "distractors": [
-          "Express Balancer Scaling ",
-          "Encryption Balancing Service ",
-          "Encryption Balancer System "
-        ]
-      },
-      {
-        "question": "EMR",
-        "answer": "Elastic MapReduce ",
-        "distractors": [
-          "Encryption Machine ",
-          "Encryption Migration ",
-          "Express MapReduce "
-        ]
-      },
-      {
-        "question": "ELB",
-        "answer": "Elastic Load Balancing ",
-        "distractors": [
-          "Encryption Load Balancer ",
-          "Encryption License Balancer ",
-          "Extensions Layer Balancer "
-        ]
-      },
-      {
-        "question": "EFA",
-        "answer": "Elastic Fabric Adapter ",
-        "distractors": [
-          "Email Fabric Address ",
-          "Emulator Firewall Analytics ",
-          "Express First Adapter "
-        ]
-      },
-      {
-        "question": "EIP",
-        "answer": "Elastic IP ",
-        "distractors": [
-          "Elastic Instance Provisioning",
-          "Enhanced IP Protocol",
-          "External Internet Pathway"
-        ]
-      },
-      {
-        "question": "EDA",
-        "answer": "Electronic Design Automation ",
-        "distractors": [
-          "Express Data Attack ",
-          "Emulator Design Agreement ",
-          "Extensions Design Access "
-        ]
-      },
-      {
-        "question": "ENI",
-        "answer": "Elastic Network Interface ",
-        "distractors": [
-          "Encryption Network Integration/Continuous ",
-          "Encryption Name Interface ",
-          "Encryption Network Interface "
-        ]
-      },
-      {
-        "question": "ECU",
-        "answer": "EC2 Compute Unit ",
-        "distractors": [
-          "Encryption Container Unit ",
-          "Emulator Control Unit ",
-          "Encryption Control Unit "
-        ]
-      },
-      {
-        "question": "FIFO",
-        "answer": "First In First Out ",
-        "distractors": [
-          "Firewall First Object ",
-          "File Federation Origin ",
-          "First Fabric Out "
-        ]
-      },
-      {
-        "question": "FaaS",
-        "answer": "Function as-a-Service ",
-        "distractors": [
-          "Federation as-a-Service ",
-          "Federation as ",
-          "Federation as "
-        ]
-      },
-      {
-        "question": "HPC",
-        "answer": "High-Performance Compute ",
-        "distractors": [
-          "undefined Client ",
-          "undefined Compute ",
-          "undefined Compute "
-        ]
-      },
-      {
-        "question": "HVM",
-        "answer": "Hardware Virtual Machine ",
-        "distractors": [
-          "undefined Virtual Memory ",
-          "undefined Vector Management ",
-          "undefined Virtual Machine "
-        ]
-      },
-      {
-        "question": "HTTP",
-        "answer": "Hypertext Transfer Protocol ",
-        "distractors": [
-          "undefined Things Per ",
-          "undefined Translation Programming ",
-          "undefined Transfer Processing "
-        ]
-      },
-      {
-        "question": "HTTPS",
-        "answer": "HTTP Secure ",
-        "distractors": [
-          "undefined System ",
-          "undefined System ",
-          "undefined Service "
-        ]
-      },
-      {
-        "question": "HDK",
-        "answer": "Hardware Development Kit ",
-        "distractors": [
-          "undefined Directory Kit ",
-          "undefined Disk Kit ",
-          "undefined Development Kubernetes "
-        ]
-      },
-      {
-        "question": "IAM",
-        "answer": "Identity & Access Management ",
-        "distractors": [
-          "Intelligence Array Management ",
-          "Initiative Address Management ",
-          "Image Automation Memory "
-        ]
-      },
-      {
-        "question": "iOT",
-        "answer": "Internet Of Things ",
-        "distractors": [
-          "Integration/Continuous Transfer ",
-          "Intelligence To ",
-          "In Transaction "
-        ]
-      },
-      {
-        "question": "S3 IA",
-        "answer": "S3 Infrequent Access ",
-        "distractors": [
-          "Intelligence Analytics ",
-          "IP Access ",
-          "Inference Area "
-        ]
-      },
-      {
-        "question": "iSCSI",
-        "answer": "Internet Small Computer Storage Interface ",
-        "distractors": [
-          "Industry Side Control Standard Intelligence ",
-          "Integration/Continuous Service Compute S3 IP ",
-          "Independent Standard Certificate Security Integration/Continuous "
-        ]
-      },
-      {
-        "question": "IOPS",
-        "answer": "Input/Output Operation Per Second ",
-        "distractors": [
-          "Independent Origin Processing Service ",
-          "Image Origin Protocol Secure ",
-          "Interface Of Processing S3 "
-        ]
-      },
-      {
-        "question": "IGW",
-        "answer": "Internet Gateway ",
-        "distractors": [
-          "Instance Gateway ",
-          "Industry Group ",
-          "Instance Gateway "
-        ]
-      },
-      {
-        "question": "ICMP",
-        "answer": "Internet Control Message Protocol ",
-        "distractors": [
-          "Industry Control Machine Parallel ",
-          "In Container Memory Programming ",
-          "Image Capacity Machine PCI "
-        ]
-      },
-      {
-        "question": "IP",
-        "answer": "Internet Protocol ",
-        "distractors": [
-          "Image Protocol ",
-          "Inter-Domain Protocol ",
-          "Indication Private "
-        ]
-      },
-      {
-        "question": "IPSec",
-        "answer": "Internet Protocol Security ",
-        "distractors": [
-          "Inference Programming Sharing ",
-          "Industry Programming Security ",
-          "Interface Per Server "
-        ]
-      },
-      {
-        "question": "IaaS",
-        "answer": "Infrastructure-as-a-Service ",
-        "distractors": [
-          "Interface-as-a-Service",
-          "Integration-as-a-Service",
-          "Information-as-a-Service"
-        ]
-      },
-      {
-        "question": "JSON",
-        "answer": "JavaScript Object Notation ",
-        "distractors": [
-          "undefined Operation Name ",
-          "undefined Own Name ",
-          "undefined Of Network "
-        ]
-      },
-      {
-        "question": "KMS",
-        "answer": "Key Management Service ",
-        "distractors": [
-          "Kubernetes MapReduce Side ",
-          "Kubernetes Markup Secure ",
-          "Kit Machine System "
-        ]
-      },
-      {
-        "question": "KVM",
-        "answer": "Kernel-based Virtual Machine ",
-        "distractors": [
-          "Kubernetes Virtual MapReduce ",
-          "Kubernetes Vector Migration ",
-          "Kit Virtual Machine "
-        ]
-      },
-      {
-        "question": "LB",
-        "answer": "Load Balancer ",
-        "distractors": [
-          "Latency Balancer",
-          "Load Buffer",
-          "Link Bandwidth"
-        ]
-      },
-      {
-        "question": "LCU",
-        "answer": "Load Balancer Capacity Unit ",
-        "distractors": [
-          "Line Balancer Control Unit ",
-          "Layer Balancer Control Unit ",
-          "List Balancing Cloud Unit "
-        ]
-      },
-      {
-        "question": "MFA",
-        "answer": "Multi-Factor Authentication ",
-        "distractors": [
-          "Memory Authentication ",
-          "Message Assertion ",
-          "Markup Analytics "
-        ]
-      },
-      {
-        "question": "MSTSC",
-        "answer": "Microsoft Terminal Service Client ",
-        "distractors": [
-          "Module Token Side Control ",
-          "Machine Time Storage Check ",
-          "Memory Translation Service Compute "
-        ]
-      },
-      {
-        "question": "MPP",
-        "answer": "Massive Parallel Processing ",
-        "distractors": [
-          "MapReduce Programming Protocol ",
-          "Management PCI Policies ",
-          "Management Protocol Processing "
-        ]
-      },
-      {
-        "question": "MITM",
-        "answer": "Man in the Middle Attack ",
-        "distractors": [
-          "Module the Memory Access ",
-          "Markup the Markup Address ",
-          "Module the Memory Assertion "
-        ]
-      },
+      }
+    ],
+    "data_and_analytics": [
       {
-        "question": "MPLS",
-        "answer": "Multi Protocol Label Switching ",
+        "question": "Collaborative data analysis with multiple parties",
+        "answer": "AWS Clean Rooms",
         "distractors": [
-          "Machine Protocol Language Second ",
-          "Machine Programming Line Second ",
-          "Manager Protocol Level Service "
+          "Amazon QuickSight",
+          "AWS Lake Formation",
+          "Amazon Athena"
         ]
       },
       {
-        "question": "MWAA",
-        "answer": "Managed Workflows for Apache Airflow",
+        "question": "Data management and governance service",
+        "answer": "Amazon DataZone",
         "distractors": [
-          "Managed Workflows for Apache Spark",
-          "Amazon MWAA Service",
-          "AWS Step Functions"
+          "AWS Glue",
+          "Amazon Redshift",
+          "AWS Lake Formation"
         ]
       },
       {
-        "question": "NFS",
-        "answer": "Network File System ",
+        "question": "Serverless search and analytics service",
+        "answer": "Amazon OpenSearch Serverless",
         "distractors": [
-          "Name Federation Server ",
-          "Notification Fabric System ",
-          "Network Fabric System "
+          "Amazon OpenSearch Service",
+          "Amazon CloudSearch",
+          "Amazon Kendra"
         ]
-      },
-      {
-        "question": "NS",
-        "answer": "Name Server ",
-        "distractors": [
-          "Name Service ",
-          "Name Services ",
-          "Network Service "
-        ]
-      },
-      {
-        "question": "NAT",
-        "answer": "Network Address Translation ",
-        "distractors": [
-          "Name Access Token ",
-          "Name Amazon Translation ",
-          "Network Authentication Translation "
-        ]
-      },
-      {
-        "question": "NVMe",
-        "answer": "Non-Volatile Memory Express ",
-        "distractors": [
-          "Network Migration Encryption ",
-          "Notification Memory Encryption ",
-          "Network Markup Extensions "
-        ]
-      },
-      {
-        "question": "NLB",
-        "answer": "Network Load Balancer ",
-        "distractors": [
-          "Node Location Broker ",
-          "Native Logging Backend ",
-          "Networked Logic Bridge "
-        ]
-      },
-      {
-        "question": "OLTP",
-        "answer": "Online Transaction Processing ",
-        "distractors": [
-          "Of Transfer Per ",
-          "Of Transfer Parallel ",
-          "Of Translation Programming "
-        ]
-      },
-      {
-        "question": "OLAP",
-        "answer": "Online Analytics Processing ",
-        "distractors": [
-          "Own Address Policies ",
-          "Own Amazon Processing ",
-          "Out Analysis Protocol "
-        ]
-      },
-      {
-        "question": "OCI",
-        "answer": "Open Container Initiative ",
-        "distractors": [
-          "Own Control Interface ",
-          "Out Control Interface ",
-          "Own Client Integration/Continuous "
-        ]
-      },
-      {
-        "question": "PCI DSS",
-        "answer": "Payment Card Industry Data Security Standard ",
-        "distractors": [
-          "Per Container Interface Data Security Storage ",
-          "Platform Cloud Industry Design Storage Service ",
-          "PCI Check Image Development Service Switching "
-        ]
-      },
-      {
-        "question": "PVM",
-        "answer": "Para Virtual Machine ",
-        "distractors": [
-          "Private Virtual Memory ",
-          "Private Virtual MapReduce ",
-          "Private Virtual Machine "
-        ]
-      },
-      {
-        "question": "PV",
-        "answer": "ParaVirtual ",
-        "distractors": [
-          "Partial Virtualization",
-          "Provisioned Volume",
-          "Private VLAN"
-        ]
-      },
-      {
-        "question": "PaaS",
-        "answer": "Platform as a Service ",
-        "distractors": [
-          "Policies Shell ",
-          "Processing Service ",
-          "Protocol Service "
-        ]
-      },
-      {
-        "question": "RAID",
-        "answer": "Redundant Array of Independent Disk ",
-        "distractors": [
-          "Replication Assertion Image Design ",
-          "Repository Application Interface Design ",
-          "Registry Area IP Design "
-        ]
-      },
-      {
-        "question": "RDS",
-        "answer": "Relational Database Service ",
-        "distractors": [
-          "Region Design System ",
-          "Redundancy Disk Service ",
-          "Resource Database System "
-        ]
-      },
-      {
-        "question": "RRS",
-        "answer": "Reduced Redundancy Storage ",
-        "distractors": [
-          "Registry Region Small ",
-          "Resource Resource System ",
-          "Resource Routing Service "
-        ]
-      },
-      {
-        "question": "RI",
-        "answer": "Reserved Instance ",
-        "distractors": [
-          "Reliable Intelligence ",
-          "Resource Image ",
-          "Resource Interface "
-        ]
-      },
-      {
-        "question": "RAM",
-        "answer": "Random-access Memory ",
-        "distractors": [
-          "Repository Message ",
-          "Registry Message ",
-          "Registry Machine "
-        ]
-      },
-      {
-        "question": "RIE",
-        "answer": "Runtime Interface Emulator ",
-        "distractors": [
-          "Registry Infrastructure Express ",
-          "Registry Initiative Express ",
-          "Resource Interface Email "
-        ]
-      },
-      {
-        "question": "SSE",
-        "answer": "Server Side Encryption ",
-        "distractors": [
-          "Service Service Encryption ",
-          "Scaling Sign-On Encryption ",
-          "Service Storage Express "
-        ]
-      },
-      {
-        "question": "S3",
-        "answer": "Simple Storage Service ",
-        "distractors": [
-          "Service System Side ",
-          "Services Security System ",
-          "Service Service Service "
-        ]
-      },
-      {
-        "question": "S3 RTC",
-        "answer": "S3 Replication Time Control ",
-        "distractors": [
-          "Routing Token Capacity ",
-          "Routing Transfer Check ",
-          "Redundancy Token Control "
-        ]
-      },
-      {
-        "question": "SRR",
-        "answer": "Same Region Replication ",
-        "distractors": [
-          "Scaling Reliable Reliable ",
-          "S3 Region Redundancy ",
-          "System Registry Routing "
-        ]
-      },
-      {
-        "question": "SMS",
-        "answer": "Server Migration Service ",
-        "distractors": [
-          "System Machine System ",
-          "Server Machine Services ",
-          "Scaling Management Service "
-        ]
-      },
-      {
-        "question": "SWF",
-        "answer": "Simple Workflow Service ",
-        "distractors": [
-          "Security Workflow Side ",
-          "Services Workflow Storage ",
-          "Switching Web Security "
-        ]
-      },
-      {
-        "question": "SES",
-        "answer": "Simple Email Service ",
-        "distractors": [
-          "Service Emulator Storage ",
-          "Switching Express Secure ",
-          "Service Encryption Service "
-        ]
-      },
-      {
-        "question": "SNS",
-        "answer": "Simple Notification Service ",
-        "distractors": [
-          "Service Network Service ",
-          "Storage Name System ",
-          "System Notification Side "
-        ]
-      },
-      {
-        "question": "SQS",
-        "answer": "Simple Queue Service ",
-        "distractors": [
-          "Second Queue Service ",
-          "Second Queue Security ",
-          "Side Queue Security "
-        ]
-      },
-      {
-        "question": "SES",
-        "answer": "Simple Email Service ",
-        "distractors": [
-          "Scaling Email Storage ",
-          "Sign-On Extensions Socket ",
-          "Sign-On Email System "
-        ]
-      },
-      {
-        "question": "SLA",
-        "answer": "Service Level Agreement ",
-        "distractors": [
-          "Standard License Authority ",
-          "Scaling Language Address ",
-          "Services Layer Agreement "
-        ]
-      },
-      {
-        "question": "SSL",
-        "answer": "Secure Socket Layer ",
-        "distractors": [
-          "Secure Service Level ",
-          "Service Service License ",
-          "Storage Small List "
-        ]
-      },
-      {
-        "question": "SOA",
-        "answer": "Start of Authority ",
-        "distractors": [
-          "Service Oriented Architecture ",
-          "Secure Operations Administration ",
-          "System Orchestration Automation "
-        ]
-      },
-      {
-        "question": "SDK",
-        "answer": "Software Development Kit ",
-        "distractors": [
-          "Sign-On Database Kit ",
-          "System Development Kubernetes ",
-          "Services Database Kubernetes "
-        ]
-      },
-      {
-        "question": "SSH",
-        "answer": "Secure Shell ",
-        "distractors": [
-          "Service Store ",
-          "Service Standard ",
-          "System Standard "
-        ]
-      },
-      {
-        "question": "SAR",
-        "answer": "Serverless Application Repository ",
-        "distractors": [
-          "Service Address Redundancy ",
-          "Sharing Adapter Redundancy ",
-          "S3 Adapter Resource "
-        ]
-      },
-      {
-        "question": "SRD",
-        "answer": "Scalable Reliable Datagrams ",
-        "distractors": [
-          "Storage Reliable Denial ",
-          "Service Replication Data ",
-          "Security Resource Database "
-        ]
-      },
-      {
-        "question": "SSO",
-        "answer": "Single Sign-On ",
-        "distractors": [
-          "Single Service Object",
-          "Secure Sign-On",
-          "Shared Session Option"
-        ]
-      },
-      {
-        "question": "SAML",
-        "answer": "Security Assertion Markup Language ",
-        "distractors": [
-          "Service Attack Machine Load ",
-          "Service Authentication Migration Load ",
-          "Service Adapter Management Layer "
-        ]
-      },
-      {
-        "question": "SaaS",
-        "answer": "Software-as-a-Service ",
-        "distractors": [
-          "System-as-a-Service Architecture",
-          "Storage-as-a-Service Application",
-          "Solutions-as-a-Service Platform"
-        ]
-      },
-      {
-        "question": "SaaS",
-        "answer": "Security-as-a-Service ",
-        "distractors": [
-          "Service ",
-          "Service ",
-          "Security "
-        ]
-      },
-      {
-        "question": "SCP",
-        "answer": "Service Control Policies ",
-        "distractors": [
-          "Service Compute Per ",
-          "Second Check Per ",
-          "Sign-On Cloud Protocol "
-        ]
-      },
-      {
-        "question": "SCA",
-        "answer": "Storage Class Analysis ",
-        "distractors": [
-          "Service Compute Analysis ",
-          "Security Capacity Array ",
-          "Store Compute Amazon "
-        ]
-      },
-      {
-        "question": "STS",
-        "answer": "Security Token Service ",
-        "distractors": [
-          "Service Transfer Service ",
-          "Store Token Service ",
-          "Service Time Sharing "
-        ]
-      },
-      {
-        "question": "SNI",
-        "answer": "Server Name Indication ",
-        "distractors": [
-          "Storage Name Image ",
-          "Storage Name Intelligence ",
-          "Sign-On Notification Instance "
-        ]
-      },
-      {
-        "question": "TTL",
-        "answer": "Time To Live ",
-        "distractors": [
-          "Transaction Time Limit",
-          "Transmission Timing Layer",
-          "Token Time Lock"
-        ]
-      },
-      {
-        "question": "TLS",
-        "answer": "Transport Layer Security ",
-        "distractors": [
-          "Terminal List Service ",
-          "Transfer Line Security ",
-          "Transfer Load Service "
-        ]
-      },
-      {
-        "question": "TPM",
-        "answer": "Trusted Platform Module ",
-        "distractors": [
-          "Transfer Protocol Machine ",
-          "Transfer Per Module ",
-          "Terminal Protocol Management "
-        ]
-      },
-      {
-        "question": "TME",
-        "answer": "Total Memory Encryption ",
-        "distractors": [
-          "Tape Management Encryption ",
-          "Token Machine Emulator ",
-          "Transfer Migration Email "
-        ]
-      },
-      {
-        "question": "TPM",
-        "answer": "Technical Program Manager ",
-        "distractors": [
-          "Transfer Processing Migration ",
-          "Transaction Programming Management ",
-          "Translation Platform Markup "
-        ]
-      },
-      {
-        "question": "TPS",
-        "answer": "Transaction Per Second ",
-        "distractors": [
-          "Transaction Processing Small ",
-          "To Processing Shell ",
-          "Time Processing Services "
-        ]
-      },
-      {
-        "question": "TCP",
-        "answer": "Transmission Control Protocol ",
-        "distractors": [
-          "Time Compute Protocol ",
-          "Translation Container Processing ",
-          "Translation Control Per "
-        ]
-      },
-      {
-        "question": "VPC",
-        "answer": "Virtual Private Cloud ",
-        "distractors": [
-          "Vector Policies Container ",
-          "Virtual Processing Capacity ",
-          "Virtual Protocol Control "
-        ]
-      },
-      {
-        "question": "VM",
-        "answer": "Virtual Machine ",
-        "distractors": [
-          "Vector Management ",
-          "Virtual Machine ",
-          "Vector Machine "
-        ]
-      },
-      {
-        "question": "VTL",
-        "answer": "Virtual Tape Library ",
-        "distractors": [
-          "Virtual Things Library ",
-          "Virtual Translation Load ",
-          "Vector To Library "
-        ]
-      },
-      {
-        "question": "VPN",
-        "answer": "Virtual Private Network ",
-        "distractors": [
-          "Vector Parallel Network ",
-          "Virtual Programming Name ",
-          "Virtual PCI Network "
-        ]
-      },
-      {
-        "question": "VLAN",
-        "answer": "Virtual Local Area Network ",
-        "distractors": [
-          "Virtual License Analytics Network ",
-          "Vector Library Area Notation ",
-          "Virtual Line Automation Name "
-        ]
-      },
-      {
-        "question": "VDI",
-        "answer": "Virtual Desktop Infrastructure ",
-        "distractors": [
-          "Virtual Desktop Initiative ",
-          "Virtual Directory Integration/Continuous ",
-          "Vector Deployment Inference "
-        ]
-      },
-      {
-        "question": "VPG",
-        "answer": "Virtual Private Gateway ",
-        "distractors": [
-          "Virtual Programming Group ",
-          "Vector Protocol Gateway ",
-          "Virtual Processing Group "
-        ]
-      },
-      {
-        "question": "WAF",
-        "answer": "Web Application Firewall",
-        "distractors": [
-          "Web Assertion Federation ",
-          "Workflow Automation File ",
-          "Workflow Adapter File "
-        ]
-      },
-      {
-        "question": "CRC",
-        "answer": "Cyclic Redundancy Check ",
-        "distractors": [
-          "Certificate Resource Compute ",
-          "Compute Routing Control ",
-          "Compute Resource Cloud "
-        ]
-      },
+      }
+    ],
+    "other": [
       {
-        "question": "CLI",
-        "answer": "Command Line Interface ",
+        "question": "Spatial simulation service for large-scale simulations",
+        "answer": "AWS SimSpace Weaver",
         "distractors": [
-          "Container Layer Initiative ",
-          "Cloud List Integration/Continuous ",
-          "Compute Layer Indication "
+          "Amazon Sumerian",
+          "AWS RoboMaker",
+          "Amazon GameLift"
         ]
       },
       {
-        "question": "CIDR",
-        "answer": "Classless Inter-Domain Routing ",
+        "question": "Supply chain management and optimization",
+        "answer": "AWS Supply Chain",
         "distractors": [
-          "Container Interface Redundancy ",
-          "Capacity IP Resource ",
-          "Compute Integration/Continuous Reliable "
+          "Amazon Forecast",
+          "AWS IoT SiteWise",
+          "Amazon Connect"
         ]
       },
       {
-        "question": "CORS",
-        "answer": "Cross Origin Resource Sharing ",
+        "question": "AI-powered medical image analysis",
+        "answer": "AWS HealthImaging",
         "distractors": [
-          "Container Object Resource System ",
-          "Container Origin Resource Service ",
-          "Check Own Registry Server "
+          "Amazon Comprehend Medical",
+          "Amazon Transcribe Medical",
+          "AWS HealthLake"
         ]
       },
       {
-        "question": "CRR",
-        "answer": "Cross Region Replication ",
+        "question": "Explore and experiment with quantum computing",
+        "answer": "Amazon Braket",
         "distractors": [
-          "Control Region Resource ",
-          "Capacity Repository Repository ",
-          "Control Replication Replication "
+          "AWS Data Pipeline",
+          "AWS DeepLens",
+          "AWS Console Mobile Application"
         ]
       },
       {
-        "question": "CI/CD",
-        "answer": "Continuous Integration/Continuous Deployment ",
+        "question": "Fully managed ground station as a service",
+        "answer": "AWS Ground Station",
         "distractors": [
-          "Control Interface Datagrams ",
-          "Computer Interface Denial ",
-          "Check Inter-Domain Disk "
+          "Amazon EC2 Auto Scaling",
+          "Amazon EMR",
+          "AWS Elemental MediaStore"
         ]
       }
     ],
@@ -3972,8 +2926,7 @@
           "Machine Programming Line Second ",
           "Manager Protocol Level Service "
         ]
-      }
-      ,
+      },
       {
         "question": "MWAA",
         "answer": "Managed Workflows for Apache Airflow",
@@ -4519,175 +3472,6 @@
           "Web Assertion Federation ",
           "Workflow Automation File ",
           "Workflow Adapter File "
-        ]
-      }
-    ],
-    "generative_ai": [
-      {
-          "question": "Train, tune, and deploy machine learning models at scale",
-          "answer": "Amazon SageMaker",
-          "distractors": [
-              "AWS Lambda",
-              "Amazon Textract",
-              "AWS AppSync"
-          ]
-      },
-      {
-          "question": "AWS chip designed for high-performance AI model training",
-          "answer": "AWS Trainium (Trainium2)",
-          "distractors": [
-              "AWS Inferentia2",
-              "Amazon Kinesis",
-              "Amazon Aurora"
-          ]
-      },
-      {
-          "question": "AWS chip optimized for deep learning inference workloads",
-          "answer": "AWS Inferentia2",
-          "distractors": [
-              "AWS Trainium (Trainium2)",
-              "Amazon Redshift",
-              "AWS Wavelength"
-          ]
-      },
-      {
-          "question": "Multimodal foundation model accessible via Amazon Bedrock",
-          "answer": "Amazon Titan",
-          "distractors": [
-              "Amazon Neptune",
-              "Amazon Rekognition",
-              "AWS Snowcone"
-          ]
-      },
-      {
-          "question": "AI assistant for writing code, querying data, and using AWS services",
-          "answer": "Amazon CodeWhisperer",
-          "distractors": [
-              "AWS Copilot",
-              "Amazon WorkDocs",
-              "Amazon Translate"
-          ]
-      },
-      {
-          "question": "Automate code reviews and identify expensive lines of code",
-          "answer": "Amazon CodeGuru",
-          "distractors": [
-              "Amazon Lex",
-              "AWS Cloud9",
-              "Amazon Comprehend"
-          ]
-      },
-
-      {
-        "question": "Fully managed service for foundation models from multiple providers",
-        "answer": "Amazon Bedrock",
-        "distractors": [
-          "Amazon SageMaker",
-          "AWS Lambda",
-          "Amazon Comprehend"
-        ]
-      },
-      {
-        "question": "AI assistant for AWS services and cloud operations",
-        "answer": "Amazon Q Business",
-        "distractors": [
-          "AWS Chatbot",
-          "Amazon Lex",
-          "Amazon CodeWhisperer"
-        ]
-      },
-      {
-        "question": "AI service for medical transcription and documentation",
-        "answer": "AWS HealthScribe",
-        "distractors": [
-          "Amazon Transcribe",
-          "Amazon Comprehend Medical",
-          "AWS HealthLake"
-        ]
-      },
-      {
-        "question": "AI-powered call center analytics service",
-        "answer": "Amazon Transcribe Call Analytics",
-        "distractors": [
-          "Amazon Connect",
-          "Amazon Lex",
-          "Contact Lens for Amazon Connect"
-        ]
-      }
-    ],
-    "data_and_analytics": [
-      {
-        "question": "Collaborative data analysis with multiple parties",
-        "answer": "AWS Clean Rooms",
-        "distractors": [
-          "Amazon QuickSight",
-          "AWS Lake Formation",
-          "Amazon Athena"
-        ]
-      },
-      {
-        "question": "Data management and governance service",
-        "answer": "Amazon DataZone",
-        "distractors": [
-          "AWS Glue",
-          "Amazon Redshift",
-          "AWS Lake Formation"
-        ]
-      },
-      {
-        "question": "Serverless search and analytics service",
-        "answer": "Amazon OpenSearch Serverless",
-        "distractors": [
-          "Amazon OpenSearch Service",
-          "Amazon CloudSearch",
-          "Amazon Kendra"
-        ]
-      }
-    ],
-    "other": [
-      {
-        "question": "Spatial simulation service for large-scale simulations",
-        "answer": "AWS SimSpace Weaver",
-        "distractors": [
-          "Amazon Sumerian",
-          "AWS RoboMaker",
-          "Amazon GameLift"
-        ]
-      },
-      {
-        "question": "Supply chain management and optimization",
-        "answer": "AWS Supply Chain",
-        "distractors": [
-          "Amazon Forecast",
-          "AWS IoT SiteWise",
-          "Amazon Connect"
-        ]
-      },
-      {
-        "question": "AI-powered medical image analysis",
-        "answer": "AWS HealthImaging",
-        "distractors": [
-          "Amazon Comprehend Medical",
-          "Amazon Transcribe Medical",
-          "AWS HealthLake"
-        ]
-      },
-      {
-        "question": "Explore and experiment with quantum computing",
-        "answer": "Amazon Braket",
-        "distractors": [
-          "AWS Data Pipeline",
-          "AWS DeepLens",
-          "AWS Console Mobile Application"
-        ]
-      },
-      {
-        "question": "Fully managed ground station as a service",
-        "answer": "AWS Ground Station",
-        "distractors": [
-          "Amazon EC2 Auto Scaling",
-          "Amazon EMR",
-          "AWS Elemental MediaStore"
         ]
       }
     ]
