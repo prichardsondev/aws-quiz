@@ -1,9 +1,9 @@
-cat > .github/workflows/deploy-pi.yml <<'YAML'
 name: Deploy aws-quiz to Pi
 
-'on':
+on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -21,7 +21,6 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.PI_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-
           cat >> ~/.ssh/config <<EOF
           Host pi-cf
             HostName ${{ secrets.PI_HOST }}
@@ -37,4 +36,4 @@ jobs:
           TUNNEL_SERVICE_TOKEN_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
         run: |
           ssh pi-cf "/usr/local/bin/aws-quiz-deploy.sh"
-YAML
+
