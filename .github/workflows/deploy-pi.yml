@@ -9,31 +9,38 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Verify required secrets exist
+        run: |
+          test -n "${{ secrets.PI_HOST }}" || (echo "Missing PI_HOST secret" && exit 1)
+          test -n "${{ secrets.PI_USER }}" || (echo "Missing PI_USER secret" && exit 1)
+          test -n "${{ secrets.PI_SSH_KEY }}" || (echo "Missing PI_SSH_KEY secret" && exit 1)
+          test -n "${{ secrets.CF_ACCESS_CLIENT_ID }}" || (echo "Missing CF_ACCESS_CLIENT_ID secret" && exit 1)
+          test -n "${{ secrets.CF_ACCESS_CLIENT_SECRET }}" || (echo "Missing CF_ACCESS_CLIENT_SECRET secret" && exit 1)
+
       - name: Install cloudflared
         run: |
           curl -fsSL https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg >/dev/null
-          echo "deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared jammy main" | sudo tee /etc/apt/sources.list.d/cloudflared.list
+          echo "deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared jammy main" \
+            | sudo tee /etc/apt/sources.list.d/cloudflared.list >/dev/null
           sudo apt-get update
           sudo apt-get install -y cloudflared
+          cloudflared --version
 
-      - name: Setup SSH
+      - name: Write SSH key
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.PI_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
-          cat >> ~/.ssh/config <<EOF
-          Host pi-cf
-            HostName ${{ secrets.PI_HOST }}
-            User ${{ secrets.PI_USER }}
-            IdentityFile ~/.ssh/id_ed25519
-            StrictHostKeyChecking no
-            ProxyCommand cloudflared access ssh --hostname %h
-          EOF
 
-      - name: Deploy
+      - name: Deploy via Cloudflare Access SSH
         env:
-          TUNNEL_SERVICE_TOKEN_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
-          TUNNEL_SERVICE_TOKEN_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
+          CF_ACCESS_CLIENT_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
+          CF_ACCESS_CLIENT_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
         run: |
-          ssh pi-cf "/usr/local/bin/aws-quiz-deploy.sh"
+          ssh -i ~/.ssh/id_ed25519 \
+              -o StrictHostKeyChecking=no \
+              -o UserKnownHostsFile=/dev/null \
+              -o "ProxyCommand=cloudflared access ssh --hostname %h" \
+              ${{ secrets.PI_USER }}@${{ secrets.PI_HOST }} \
+              "/usr/local/bin/aws-quiz-deploy.sh"
 
