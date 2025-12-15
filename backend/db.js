@@ -24,6 +24,17 @@ const db = {
     }
 };
 
+// helper to expose full json for services
+db._getAll = async () => {
+    try {
+        const data = await getJsonFile('./services.json');
+        return data;
+    } catch (err) {
+        console.log('db._getAll', err);
+        return {};
+    }
+};
+
 module.exports = {
     db,
 };

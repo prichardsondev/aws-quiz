@@ -2,6 +2,8 @@
 
 ---
 
+**Recent updates:** Updated `backend/services.json` (Dec 2025): renamed Elasticsearch → OpenSearch; updated Graviton/Inferentia/Trainium entries; removed legacy "(Preview)" tags; added container/serverless/observability categories and several new services (App Runner, AppFlow, MWAA, EMR Serverless, Amazon Omics, AWS Private 5G, AWS Network Firewall, AWS Transfer Family, and more). See `backend/services.json` for full details.
+
 
 ### Video Overview
 https://www.screencast.com/t/fb2EgPdK

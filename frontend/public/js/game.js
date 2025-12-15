@@ -16,7 +16,8 @@ let savedResults = {};
 let questionIndex;
 
 let questions = [];
-let url = `http://localhost:3000/learn/${localStorage.getItem("currentCatagory")}`
+let url = `https://awsquizapi.raspberrynode.com/learn/${localStorage.getItem("currentCatagory")}`
+console.log(url);
 fetch(url)
     .then(res =>  res.json())
     .then((loadedQuestions) => {
