@@ -184,3 +184,7 @@
     transform: rotate(360deg);
   }
 }
+.choice-container { border: 0; border-bottom: 1px solid #d9dfe5; }
+.choice-container:not([disabled]):hover { box-shadow: none; transform: none; background: #edf3f8; }
+.choice-prefix { background: transparent; color: var(--brand); }
+#loader { width: 3rem; height: 3rem; border-width: .3rem; }

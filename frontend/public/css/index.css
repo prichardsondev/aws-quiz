@@ -247,3 +247,13 @@ input::placeholder {
 .incorrectAnswer * {
   color: inherit;
 }
+
+/* Quiet controls and a direct learning path, following Paul's site guidance. */
+:root, body { background: #fafafa; }
+h1 { font-size: clamp(2.8rem, 5vw, 3.6rem); margin-bottom: 1.6rem; }
+h2 { font-size: clamp(2.2rem, 4vw, 3rem); }
+.container { min-height: auto; align-items: flex-start; padding-top: 4rem; }
+.summary { max-width: 55rem; font-size: 1.7rem; line-height: 1.5; }
+.btn, .btn-primary { border: 0; background: transparent; color: var(--brand); width: auto; min-height: 4.4rem; padding: 1rem 1.2rem; text-decoration: underline; text-underline-offset: .25em; }
+.btn:not([disabled]):hover { box-shadow: none; transform: none; }
+.storage-notice { max-width: 70rem; margin: 2rem auto; padding: 0 1.6rem; line-height: 1.5; }

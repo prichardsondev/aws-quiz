@@ -1,3 +1,5 @@
+> Migration update: this historical handoff remains for provenance. ChatGPT Sites uses Cloudflare Workers, not Vercel Functions. The isolated static-hosting branch implements a local preview; the move is not deployed or complete. Follow README.md and docs/HOSTING.md for current instructions.
+
 # Handoff note for Codex: move aws-quiz to oddlytrue.ai
 
 **Goal:** run the aws-quiz frontend *and* backend on oddlytrue.ai (ChatGPT Sites / Vercel) instead of the Raspberry Pi.

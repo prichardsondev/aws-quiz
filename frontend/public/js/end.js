@@ -1,3 +1,4 @@
+export function init() {
 const username = document.getElementById('username');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
@@ -10,12 +11,12 @@ const retryMissedBtn = document.getElementById('retryMissedBtn');
 
 const MAX_HIGH_SCORES = 50;
 
-const correct = Number(localStorage.getItem('mostRecentScore')) || 0;
-const total = Number(localStorage.getItem('mostRecentTotal')) || 0;
-const category = localStorage.getItem('currentCatagory') || '';
+const correct = Number(localStore.getItem('mostRecentScore')) || 0;
+const total = Number(localStore.getItem('mostRecentTotal')) || 0;
+const category = localStore.getItem('currentCatagory') || '';
 const pct = total ? Math.round((correct / total) * 100) : 0;
-const savedResults = readJson(localStorage, 'savedResults', []);
-const results = Array.isArray(savedResults) ? savedResults : [];
+const savedResults = readJson(localStore, 'savedResults', []);
+const results = Array.isArray(savedResults) ? savedResults.filter(isResult) : [];
 const missed = results.filter((r) => r.selected !== r.answer);
 
 const verdict = (p) => {
@@ -33,7 +34,7 @@ if (!total) {
     document.getElementById('reviewBtn').classList.add('hidden');
 }
 
-if (missed.length && missed.every((r) => r.raw)) {
+if (missed.length && missed.every((r) => isQuestion(r.raw))) {
     retryMissedBtn.textContent = `Retry missed (${missed.length})`;
     retryMissedBtn.classList.remove('hidden');
 }
@@ -48,17 +49,18 @@ document.getElementById('saveForm').addEventListener('submit', (e) => {
     const name = username.value.trim();
     if (!name || !total) return;
 
-    const highScores = readJson(localStorage, 'highScores', []);
+    const savedScores = readJson(localStore, 'highScores', []);
+    const highScores = Array.isArray(savedScores) ? savedScores.filter(isScore) : [];
     highScores.push({ name, correct, total, pct, category, date: new Date().toISOString() });
     // Rank by percentage, then by how many questions were answered.
     highScores.sort((a, b) => (b.pct ?? -1) - (a.pct ?? -1) || (b.total ?? 0) - (a.total ?? 0));
-    writeJson(localStorage, 'highScores', highScores.slice(0, MAX_HIGH_SCORES));
-    window.location.assign('/highscores.html');
+    writeJson(localStore, 'highScores', highScores.slice(0, MAX_HIGH_SCORES));
+    navigate('./highscores.html');
 });
 
 retryMissedBtn.addEventListener('click', () => {
-    writeJson(sessionStorage, 'retryQuestions', missed.map((r) => r.raw));
-    window.location.assign('/game.html');
+    writeJson(sessionStore, 'retryQuestions', missed.map((r) => r.raw));
+    navigate('./game.html');
 });
 
 const renderResults = () => {
@@ -100,3 +102,5 @@ document.getElementById('backBtn').addEventListener('click', () => {
 });
 
 wrongOnly.addEventListener('change', renderResults);
+
+}

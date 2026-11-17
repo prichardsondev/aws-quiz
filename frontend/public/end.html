@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Results – AWS Service Quiz</title>
     <link rel="stylesheet" href="./css/index.css" />
-  </head>
+  <link rel="stylesheet" href="./css/game.css" />
+<link rel="stylesheet" href="./css/highscores.css" />
+</head>
   <body>
     <main class="container" id="container">
       <div id="end" class="flex-center flex-column">
@@ -18,8 +20,8 @@
         </form>
         <button type="button" class="btn" id="reviewBtn">Review answers</button>
         <button type="button" class="btn hidden" id="retryMissedBtn"></button>
-        <a class="btn" href="/game.html">Play again</a>
-        <a class="btn" href="/">Go home</a>
+        <a class="btn" href="./game.html">Play again</a>
+        <a class="btn" href="./index.html">Go home</a>
       </div>
     </main>
     <section id="savedResults" class="hidden" aria-labelledby="reviewTitle">
@@ -31,6 +33,6 @@
       <div id="results"></div>
     </section>
     <script src="./js/common.js"></script>
-    <script src="./js/end.js"></script>
+
   </body>
 </html>

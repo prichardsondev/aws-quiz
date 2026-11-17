@@ -1,0 +1,11 @@
+const { cpSync, mkdirSync, rmSync } = require('node:fs');
+const { resolve } = require('node:path');
+const { execFileSync } = require('node:child_process');
+const root = resolve(__dirname, '..');
+execFileSync(process.execPath, [resolve(__dirname, 'validate-questions.js'), resolve(root, 'backend/services.json')], { stdio: 'inherit' });
+const out = resolve(root, 'dist');
+rmSync(out, { recursive: true, force: true });
+mkdirSync(out);
+cpSync(resolve(root, 'frontend/public'), out, { recursive: true });
+cpSync(resolve(root, 'backend/services.json'), resolve(out, 'questions.json'));
+console.log('Static quiz built in dist/');

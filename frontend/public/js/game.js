@@ -1,3 +1,4 @@
+export function init() {
 const questionEl = document.getElementById('question');
 const choiceButtons = Array.from(document.querySelectorAll('.choice-container'));
 const questionCounterText = document.getElementById('questionCounter');
@@ -14,8 +15,8 @@ const loadErrorText = document.getElementById('loadErrorText');
 const CORRECT_BONUS = 1;
 const CORRECT_ADVANCE_MS = 1200;
 
-const category = localStorage.getItem('currentCatagory');
-const quizLength = localStorage.getItem('quizLength') || '10';
+const category = localStore.getItem('currentCatagory');
+const quizLength = localStore.getItem('quizLength') || '10';
 
 let questions = [];
 let questionIndex = -1;
@@ -24,7 +25,7 @@ let acceptingAnswers = false;
 let advanceTimer = null;
 let results = [];
 
-if (!category) window.location.replace('/');
+if (!category) { setTimeout(() => navigate('./index.html', 'replaceState'), 0); return; }
 
 const shuffle = (items) => {
     const copy = [...items];
@@ -55,15 +56,13 @@ async function loadQuestions() {
     loader.classList.remove('hidden');
 
     // "Retry missed" on the results page replays just the questions the player got wrong.
-    const retry = readJson(sessionStorage, 'retryQuestions', null);
-    if (Array.isArray(retry) && retry.length) {
-        sessionStorage.removeItem('retryQuestions');
+    const retry = readJson(sessionStore, 'retryQuestions', null);
+    if (Array.isArray(retry) && retry.length && retry.every(isQuestion)) {
+        sessionStore.removeItem('retryQuestions');
         return retry;
     }
 
-    const res = await fetch(`${API_BASE}/learn/${encodeURIComponent(category)}`);
-    if (!res.ok) throw new Error(`The server responded with ${res.status}.`);
-    const data = await res.json();
+    const data = (await getBank())[category];
     if (!Array.isArray(data) || data.length === 0) throw new Error('This category has no questions yet.');
     const shuffled = shuffle(data);
     return quizLength === 'all' ? shuffled : shuffled.slice(0, Number(quizLength) || 10);
@@ -90,11 +89,11 @@ async function startGame() {
 }
 
 const finishGame = () => {
-    localStorage.setItem('mostRecentScore', score);
-    localStorage.setItem('mostRecentTotal', questions.length);
-    writeJson(localStorage, 'savedResults', results);
+    localStore.setItem('mostRecentScore', score);
+    localStore.setItem('mostRecentTotal', questions.length);
+    writeJson(localStore, 'savedResults', results);
     window.removeEventListener('beforeunload', confirmLeave);
-    window.location.assign('/end.html');
+    navigate('./end.html');
 };
 
 const getNewQuestion = () => {
@@ -169,7 +168,7 @@ choiceButtons.forEach((button) => {
 
 nextBtn.addEventListener('click', getNewQuestion);
 
-document.addEventListener('keydown', (e) => {
+const onKeydown = (e) => {
     if (e.altKey || e.ctrlKey || e.metaKey) return;
     const key = e.key.toUpperCase();
     const slot = '1234'.indexOf(key) + 1 || LETTERS.indexOf(key) + 1;
@@ -177,7 +176,8 @@ document.addEventListener('keydown', (e) => {
         e.preventDefault();
         answer(slot);
     }
-});
+};
+document.addEventListener('keydown', onKeydown);
 
 const confirmLeave = (e) => {
     if (questionIndex >= 0 && questionIndex < questions.length) {
@@ -190,3 +190,7 @@ window.addEventListener('beforeunload', confirmLeave);
 document.getElementById('retryLoad').addEventListener('click', startGame);
 
 if (category) startGame();
+
+return () => { clearTimeout(advanceTimer); document.removeEventListener("keydown", onKeydown); window.removeEventListener("beforeunload", confirmLeave); };
+
+}

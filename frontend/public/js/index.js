@@ -1,12 +1,11 @@
+export function init() {
 const select = document.getElementById('catagories');
 const lengthSelect = document.getElementById('quizLength');
 const playBtn = document.getElementById('playBtn');
 const loadError = document.getElementById('loadError');
 
 async function getCatagories() {
-    const res = await fetch(`${API_BASE}/categories`);
-    if (!res.ok) throw new Error(`categories request failed: ${res.status}`);
-    const categories = await res.json();
+    const categories = Object.keys(await getBank());
     if (!Array.isArray(categories) || categories.length === 0) throw new Error('no categories');
     return categories;
 }
@@ -40,9 +39,9 @@ async function loadCatagories() {
     acronymGroup.append(...acronyms.map(option));
     select.replaceChildren(...services.map(option), ...(acronyms.length ? [acronymGroup] : []));
 
-    const current = localStorage.getItem('currentCatagory');
+    const current = localStore.getItem('currentCatagory');
     select.value = current && cats.includes(current) ? current : (services[0] || acronyms[0]);
-    const savedLength = localStorage.getItem('quizLength');
+    const savedLength = localStore.getItem('quizLength');
     if (savedLength) lengthSelect.value = savedLength;
 
     select.disabled = false;
@@ -51,12 +50,14 @@ async function loadCatagories() {
 
 document.getElementById('startForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    localStorage.setItem('currentCatagory', select.value);
-    localStorage.setItem('quizLength', lengthSelect.value);
-    sessionStorage.removeItem('retryQuestions');
-    window.location.assign('./game.html');
+    localStore.setItem('currentCatagory', select.value);
+    localStore.setItem('quizLength', lengthSelect.value);
+    sessionStore.removeItem('retryQuestions');
+    navigate('./game.html');
 });
 
 document.getElementById('retryCategories').addEventListener('click', loadCatagories);
 
 loadCatagories();
+
+}

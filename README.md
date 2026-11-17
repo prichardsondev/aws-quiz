@@ -1,95 +1,50 @@
-## **AWS Service Quiz:**
+# AWS Service Quiz
 
----
+A static practice quiz with 290 service and acronym questions. Students choose a category and round length, get answer feedback, review results, retry missed questions, and save browser-local scores.
 
-**Recent updates:** Updated `backend/services.json` (Dec 2025): renamed Elasticsearch → OpenSearch; updated Graviton/Inferentia/Trainium entries; removed legacy "(Preview)" tags; added container/serverless/observability categories and several new services (App Runner, AppFlow, MWAA, EMR Serverless, Amazon Omics, AWS Private 5G, AWS Network Firewall, AWS Transfer Family, and more). See `backend/services.json` for full details.
+## Preview
 
-
-### Video Overview
-https://www.screencast.com/t/fb2EgPdK
-
-
----
-
-
-### backend folder:
-
-#### To run:
-
-- cd AWSQUIZ/backend
-
-- npm install
-
-- npm start
-
-To run in developer mode which restarts server on file save:<br/>
-- npm run serve (instead of npm start)
-
-#### Structure app.js->route.js->controller.js->service.js->db.js <br/>
-Contrived file names to make it easy to follow<br/>
-Note these would be folders of same name in actual app<br/>
-Great blog post on express api structure below<br/>
-https://www.coreycleary.me/project-structure-for-an-express-rest-api-when-there-is-no-standard-way
-
-#### Files:
-app.js - run backend server<br/>
-route.js - direct endpoint calls to controller<br/>
-controller.js - strip out request data -> validate it -> call service<br/>
-service.js - business logic (maybe better to validate here) -> shape data -> call db<br/>
-db.js - calls to backend storage (services.json) change to any backend storage<br/>
-
-
-GET <br/>
-http://localhost:3000/learn/:catagory<br/>
-ex:
-http://localhost:3000/learn/compute
-
-
-POST <br/>
-http://localhost:3000/learn/:catagory <br/>
-
-body<br/>
-```javascript 
-    {
-        "question": "Fully managed ground station as a service",
-        "answer": "AWS Ground Station",
-        "distractors": [
-            "Amazon Managed Streaming for Apache Kafka",
-            "AWS Device Farm",
-            "Amazon Translate"
-        ]
-    }
+```sh
+npm run build
+npm run preview
 ```
----
 
+Open http://127.0.0.1:4173. Build and preview need Node and Python 3; no runtime npm packages or API server are required. `dist/` is the complete deployment artifact. Serve it over HTTP, not `file://`. Paths are relative so it can also live at `/aws-quiz/`.
 
-### frontend folder:
+The source of truth is `backend/services.json`. The build validates and copies this bank to `dist/questions.json`; it never uses the stale backups or generator output. All questions and answers are intentionally public practice material, not a secure examination system.
 
-I borrowed front end heavily from<br/>
-https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript
+## Checks
 
-#### To run:
+```sh
+npm ci
+npm test
+npx playwright install chromium
+npm run test:e2e
+npm ci --prefix backend
+npm run build --prefix backend
+npm test --prefix backend -- --runInBand
+```
 
-- cd AWSQUIZ/frontend
+On a Mac with Chrome already installed, use `PLAYWRIGHT_CHANNEL=chrome npm run test:e2e`. Browser tests start and stop their own loopback server. CI runs checks only, including browser tests; it has no Pi deployment or automatic production release.
 
-- npm install
+## Browser storage
 
-- npm start
+Scores stay in the current browser; there is no shared leaderboard. Storage keys are prefixed `awsQuiz:` to avoid conflicts with other oddlytrue.ai tools. Old scores at the Pi domain do not transfer to a different origin. If storage getters or writes fail, in-document navigation preserves the round, review, retry and scores in memory. A visible notice explains that reload/close loses that temporary data. No player data is sent to a server or put in URLs.
 
-follow simple game at localhost:4000
+## Retained teaching API
 
----
+The Express/TypeScript API remains in `backend/src` for separate local API exercises. It is **not** included in the static site's deployment. Run `npm run build --prefix backend`, then `PORT=5001 npm start --prefix backend` (macOS may reserve port 5000).
 
-### generateGameQuestions folder:
-not necessary to run game - I just wrote to build json questions
+- `GET /categories`
+- `GET /learn/:category`
+- `POST /learn/:category`, requiring `Authorization: Bearer <ADMIN_API_KEY>`; disabled if no key is configured.
 
-#### Files:
-aws.txt - list of AWS services and descriptions by catagory<br/>
-aws.json - json format created by app.js. used for backend as services.json<br/>
-app.js - parses aws.txt -> creates aws.json
+POST accepts `question`, `answer`, and a string-array `distractors`. It writes to the configured JSON file (`SERVICES_FILE`), which requires a persistent writable host. Never put the admin key in frontend code. `CORS_ORIGINS` is configurable; the default permits only local development.
 
-list of services to create aws.json copied from<br/>
-https://www.techradar.com/news/aws
+Paul previously used a sandbox where students added questions while learning APIs. Its current deployment and continued need have not been verified. This migration preserves the code but does not replace that hosted sandbox; decide its future separately before retiring the Pi/API service. No public write endpoint has been added.
 
-list of acronyms to create awsacronyms.json copied from<br/>
-https://geekflare.com/about/
+## Hosting status
+
+This branch is a local migration preview, not a completed move. See `docs/HOSTING.md` for release gates. Keep the main-branch Pi workflow untouched until explicitly disabled or replaced safely; do not merge simply to test hosting.
+
+The original frontend was inspired by https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript. Original video overview: https://www.screencast.com/t/fb2EgPdK.

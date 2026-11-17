@@ -1,9 +1,10 @@
+export function init() {
 const highScoresList = document.getElementById("highScoresList");
 const scoreFilter = document.getElementById("scoreFilter");
 const SHOWN = 10;
 
-const stored = readJson(localStorage, "highScores", []);
-const highScores = Array.isArray(stored) ? stored : [];
+const stored = readJson(localStore, "highScores", []);
+const highScores = Array.isArray(stored) ? stored.filter(isScore) : [];
 
 // Older saves were { name, score } with no total; show them as a raw count.
 const describe = (s) => {
@@ -36,3 +37,5 @@ const render = () => {
 
 scoreFilter.addEventListener("change", render);
 render();
+
+}

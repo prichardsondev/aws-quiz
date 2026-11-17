@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWS Service Quiz</title>
     <link rel="stylesheet" href="./css/index.css">
+<link rel="stylesheet" href="./css/game.css" />
+<link rel="stylesheet" href="./css/highscores.css" />
 </head>
 <body>
     <main class="container">
         <div id="home" class="flex-center flex-column">
             <h1>AWS Service Quiz</h1>
+            <p class="summary">Choose a category, practise, then review the answers you missed.</p>
             <form id="startForm" class="setup">
                 <label class="label" for="catagories">Category</label>
                 <select name="catagories" id="catagories" disabled>
@@ -32,6 +35,6 @@
         </div>
     </main>
     <script src="./js/common.js"></script>
-    <script src="./js/index.js"></script>
+
 </body>
 </html>

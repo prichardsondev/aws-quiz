@@ -1,0 +1,11 @@
+{
+  "name": "aws-quiz-static",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-static.js",
+    "test": "node --test scripts/storage.test.js",
+    "test:e2e": "playwright test",
+    "preview": "python3 -m http.server 4173 --bind 127.0.0.1 --directory dist"
+  },
+  "devDependencies": { "@playwright/test": "1.61.1" }
+}
