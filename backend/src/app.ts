@@ -6,7 +6,9 @@ import { createRouter } from './router';
 import { QuizService } from './service';
 
 const DEFAULT_ORIGINS = [
+  'https://awsquiz.raspberrynode.com',
   'http://localhost:4000',
+  'https://awsquizapi.raspberrynode.com',
 ];
 
 const allowedOrigins = () =>

@@ -1,3 +1,11 @@
+# Publication update — 2026-11-17
+
+Paul clarified that the two-part server/API/Pi setup was for teaching and that he now wants only the game online for class. After he reviewed the integrated preview, the game was published in existing OddlyTrue Site version 91 at https://www.oddlytrue.ai/aws-quiz/, with a Projects link. Site source commit: `6e644a53f516dd65a8253aec71e0ceefcb7d5627`. No Pi, API, DNS, billing or secrets changes were made. The migration branch preserves the teaching backend exactly as it appears on `claude/review-fixes`; the draft PR also includes Claude's existing review changes relative to main.
+
+The old main-branch `deploy-pi.yml` workflow remains active. Do not merge this branch or push to main until its deployment path is safely resolved. This branch replaces it with checks only, but no workflow has been disabled on GitHub.
+
+The plan below records the preparation and original release gates; its historical local-only statements describe the pre-publication stage.
+
 # Hosting migration plan
 
 ## Recommendation

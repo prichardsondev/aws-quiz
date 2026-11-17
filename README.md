@@ -39,12 +39,12 @@ The Express/TypeScript API remains in `backend/src` for separate local API exerc
 - `GET /learn/:category`
 - `POST /learn/:category`, requiring `Authorization: Bearer <ADMIN_API_KEY>`; disabled if no key is configured.
 
-POST accepts `question`, `answer`, and a string-array `distractors`. It writes to the configured JSON file (`SERVICES_FILE`), which requires a persistent writable host. Never put the admin key in frontend code. `CORS_ORIGINS` is configurable; the default permits only local development.
+POST accepts `question`, `answer`, and a string-array `distractors`. It writes to the configured JSON file (`SERVICES_FILE`), which requires a persistent writable host. Never put the admin key in frontend code. `CORS_ORIGINS` remains configurable with the teaching API’s existing defaults. The static game never calls this API.
 
 Paul previously used a sandbox where students added questions while learning APIs. Its current deployment and continued need have not been verified. This migration preserves the code but does not replace that hosted sandbox; decide its future separately before retiring the Pi/API service. No public write endpoint has been added.
 
 ## Hosting status
 
-This branch is a local migration preview, not a completed move. See `docs/HOSTING.md` for release gates. Keep the main-branch Pi workflow untouched until explicitly disabled or replaced safely; do not merge simply to test hosting.
+The student game is published at https://www.oddlytrue.ai/aws-quiz/ and linked from Projects. OddlyTrue Site version 91 contains the tested static build. The Pi and teaching API remain untouched. This repository branch is prepared for review only; do not merge while the old main-branch Pi deployment remains active. See `docs/HOSTING.md` for details.
 
 The original frontend was inspired by https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript. Original video overview: https://www.screencast.com/t/fb2EgPdK.
