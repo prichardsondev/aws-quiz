@@ -4,18 +4,50 @@ on:
   push:
     branches:
       - main
+  pull_request:
+
+permissions:
+  contents: read
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+
+      - name: Validate question bank
+        run: node ../scripts/validate-questions.js services.json
+
+  deploy:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    env:
+      CF_ACCESS_CLIENT_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
+      CF_ACCESS_CLIENT_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
+      PI_HOST: ${{ secrets.PI_HOST }}
+      PI_USER: ${{ secrets.PI_USER }}
+      PI_SSH_KEY: ${{ secrets.PI_SSH_KEY }}
+      PI_KNOWN_HOSTS: ${{ secrets.PI_KNOWN_HOSTS }}
     steps:
       - name: Verify required secrets exist
         run: |
-          test -n "${{ secrets.PI_HOST }}" || (echo "Missing PI_HOST secret" && exit 1)
-          test -n "${{ secrets.PI_USER }}" || (echo "Missing PI_USER secret" && exit 1)
-          test -n "${{ secrets.PI_SSH_KEY }}" || (echo "Missing PI_SSH_KEY secret" && exit 1)
-          test -n "${{ secrets.CF_ACCESS_CLIENT_ID }}" || (echo "Missing CF_ACCESS_CLIENT_ID secret" && exit 1)
-          test -n "${{ secrets.CF_ACCESS_CLIENT_SECRET }}" || (echo "Missing CF_ACCESS_CLIENT_SECRET secret" && exit 1)
+          for name in PI_HOST PI_USER PI_SSH_KEY CF_ACCESS_CLIENT_ID CF_ACCESS_CLIENT_SECRET; do
+            test -n "${!name}" || { echo "Missing $name secret"; exit 1; }
+          done
 
       - name: Install cloudflared
         run: |
@@ -26,23 +58,27 @@ jobs:
           sudo apt-get install -y cloudflared
           cloudflared --version
 
-      - name: Write SSH key
+      - name: Write SSH key and known hosts
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.PI_SSH_KEY }}" > ~/.ssh/id_ed25519
+          printf '%s\n' "$PI_SSH_KEY" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
+          if [ -n "$PI_KNOWN_HOSTS" ]; then
+            printf '%s\n' "$PI_KNOWN_HOSTS" > ~/.ssh/known_hosts
+            echo "HOST_KEY_OPTS=-o StrictHostKeyChecking=yes" >> "$GITHUB_ENV"
+          else
+            echo "::warning::PI_KNOWN_HOSTS secret not set; host key is not verified. Add it to pin the Pi's host key."
+            echo "HOST_KEY_OPTS=-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" >> "$GITHUB_ENV"
+          fi
 
       - name: Deploy via Cloudflare Access SSH
         env:
-          CF_ACCESS_CLIENT_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
-          CF_ACCESS_CLIENT_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
-          PI_HOST: ${{ secrets.PI_HOST }}
-          PI_USER: ${{ secrets.PI_USER }}
+          # cloudflared reads the service token from these instead of the command line.
+          TUNNEL_SERVICE_TOKEN_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
+          TUNNEL_SERVICE_TOKEN_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
         run: |
           ssh -i ~/.ssh/id_ed25519 \
-              -o StrictHostKeyChecking=no \
-              -o UserKnownHostsFile=/dev/null \
-              -o "ProxyCommand=cloudflared access ssh --hostname %h --service-token-id ${CF_ACCESS_CLIENT_ID} --service-token-secret ${CF_ACCESS_CLIENT_SECRET}" \
-              ${PI_USER}@${PI_HOST} \
+              $HOST_KEY_OPTS \
+              -o "ProxyCommand=cloudflared access ssh --hostname %h" \
+              "${PI_USER}@${PI_HOST}" \
               "/usr/local/bin/aws-quiz-deploy.sh"
-

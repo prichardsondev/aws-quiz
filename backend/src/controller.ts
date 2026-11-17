@@ -1,5 +1,6 @@
-import { Request, Response } from 'express';
-import { QuizService } from './service';
+import { NextFunction, Request, Response } from 'express';
+import crypto from 'crypto';
+import { QuizService, ValidationError } from './service';
 
 export const buildController = (service: QuizService) => ({
   putQuestion: async (req: Request, res: Response) => {
@@ -7,7 +8,7 @@ export const buildController = (service: QuizService) => ({
       await service.addQuestion(req.params.category, req.body);
       res.sendStatus(201);
     } catch (error) {
-      if (isClientError(error)) {
+      if (error instanceof ValidationError) {
         res.status(400).json({ message: error.message });
         return;
       }
@@ -21,7 +22,7 @@ export const buildController = (service: QuizService) => ({
       const questions = await service.getQuestions(req.params.category);
       res.json(questions);
     } catch (error) {
-      if (isClientError(error)) {
+      if (error instanceof ValidationError) {
         res.status(400).json({ message: error.message });
         return;
       }
@@ -41,6 +42,20 @@ export const buildController = (service: QuizService) => ({
   },
 });
 
-const isClientError = (error: unknown): error is Error => {
-  return error instanceof Error && error.message.toLowerCase().includes('invalid');
+// Writes are disabled unless ADMIN_API_KEY is set; callers must send it as a bearer token.
+export const requireApiKey = (apiKey: string | undefined) => {
+  return (req: Request, res: Response, next: NextFunction) => {
+    if (!apiKey) {
+      res.sendStatus(403);
+      return;
+    }
+    const header = req.get('authorization') ?? '';
+    const expected = Buffer.from(`Bearer ${apiKey}`);
+    const actual = Buffer.from(header);
+    if (actual.length !== expected.length || !crypto.timingSafeEqual(actual, expected)) {
+      res.sendStatus(401);
+      return;
+    }
+    next();
+  };
 };

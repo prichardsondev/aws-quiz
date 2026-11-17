@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { Question, QuestionPayload, ServicesFile } from './types';
+import { Question, ServicesFile } from './types';
 
 export interface QuestionRepository {
   get(category: string): Promise<Question[]>;
@@ -12,32 +12,54 @@ export interface QuestionRepository {
 const DEFAULT_DATA_FILE =
   process.env.SERVICES_FILE || path.join(__dirname, '..', 'services.json');
 
-const EMPTY_DATA: ServicesFile = { catagory: {} };
+const hasOwn = (obj: object, key: string) => Object.prototype.hasOwnProperty.call(obj, key);
+
+const emptyData = (): ServicesFile => ({ catagory: {} });
 
 export class JsonDb implements QuestionRepository {
+  private cache: ServicesFile | null = null;
+  // Serializes read-modify-write cycles so concurrent posts don't lose updates.
+  private writeQueue: Promise<void> = Promise.resolve();
+
   constructor(private readonly filePath: string = DEFAULT_DATA_FILE) {}
 
   async get(category: string): Promise<Question[]> {
-    const data = await this.readFile();
-    return data.catagory[category] ?? [];
+    const data = await this.load();
+    return hasOwn(data.catagory, category) ? data.catagory[category] : [];
   }
 
-  async post(category: string, question: Question): Promise<void> {
-    const data = await this.readFile();
-    if (!data.catagory[category]) {
-      data.catagory[category] = [];
-    }
-    data.catagory[category].push(question);
-    await this.writeFile(data);
+  post(category: string, question: Question): Promise<void> {
+    const run = this.writeQueue.then(async () => {
+      const data = await this.load();
+      if (!hasOwn(data.catagory, category)) {
+        data.catagory[category] = [];
+      }
+      data.catagory[category].push(question);
+      try {
+        await this.writeFile(data);
+      } catch (err) {
+        this.cache = null; // drop the unsaved change so memory matches disk
+        throw err;
+      }
+    });
+    this.writeQueue = run.catch(() => undefined);
+    return run;
   }
 
   async getAll(): Promise<ServicesFile> {
-    return this.readFile();
+    return this.load();
   }
 
   async listCategories(): Promise<string[]> {
-    const data = await this.readFile();
-    return Object.keys(data.catagory || {});
+    const data = await this.load();
+    return Object.keys(data.catagory);
+  }
+
+  private async load(): Promise<ServicesFile> {
+    if (!this.cache) {
+      this.cache = await this.readFile();
+    }
+    return this.cache;
   }
 
   private async readFile(): Promise<ServicesFile> {
@@ -48,14 +70,18 @@ export class JsonDb implements QuestionRepository {
       return parsed;
     } catch (err: unknown) {
       if ((err as NodeJS.ErrnoException).code === 'ENOENT') {
-        await this.writeFile(EMPTY_DATA);
-        return EMPTY_DATA;
+        const data = emptyData();
+        await this.writeFile(data);
+        return data;
       }
       throw err;
     }
   }
 
+  // Write to a temp file and rename so a crash never leaves a truncated file.
   private async writeFile(data: ServicesFile): Promise<void> {
-    await fs.writeFile(this.filePath, JSON.stringify(data, null, 2), 'utf8');
+    const tmp = `${this.filePath}.${process.pid}.tmp`;
+    await fs.writeFile(tmp, JSON.stringify(data, null, 2), 'utf8');
+    await fs.rename(tmp, this.filePath);
   }
 }

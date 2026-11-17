@@ -2,24 +2,23 @@ import { QuestionRepository } from './db';
 import { Question, QuestionPayload } from './types';
 
 const MIN_DISTRACTORS = 1;
+const CATEGORY_PATTERN = /^[a-z0-9_]{1,50}$/;
+
+export class ValidationError extends Error {}
 
 export class QuizService {
   constructor(private readonly repository: QuestionRepository) {}
 
   async addQuestion(category: string, payload: QuestionPayload): Promise<void> {
-    if (!category) {
-      throw new Error('Category is required');
-    }
+    assertValidCategory(category);
     if (!isValidQuestion(payload)) {
-      throw new Error('Invalid question payload');
+      throw new ValidationError('Invalid question payload');
     }
     await this.repository.post(category, payload);
   }
 
-  getQuestions(category: string): Promise<Question[]> {
-    if (!category) {
-      throw new Error('Category is required');
-    }
+  async getQuestions(category: string): Promise<Question[]> {
+    assertValidCategory(category);
     return this.repository.get(category);
   }
 
@@ -28,6 +27,12 @@ export class QuizService {
     return categories;
   }
 }
+
+const assertValidCategory = (category: string) => {
+  if (!CATEGORY_PATTERN.test(category ?? '')) {
+    throw new ValidationError('Invalid category');
+  }
+};
 
 const isValidQuestion = (payload: QuestionPayload): payload is Question => {
   return Boolean(

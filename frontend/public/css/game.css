@@ -1,73 +1,186 @@
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
 .choice-container {
-    display: flex;
-    margin-bottom: 0.5rem;
-    width: 100%;
-    font-size: 1.8rem;
-    border: 0.1rem solid rgb(86, 165, 235, 0.25);
-    background-color: white;
-  }
-  
-  .choice-container:hover {
-    cursor: pointer;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  font-size: clamp(1.6rem, 4vw, 1.8rem);
+  text-align: left;
+  border: 0.1rem solid rgba(86, 165, 235, 0.25);
+  background-color: white;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .choice-container:not([disabled]):hover {
     box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
   }
-  
-  .choice-prefix {
-    padding: 1.5rem 2.5rem;
-    background-color: #56a5eb;
-    color: white;
-  }
-  
-  .choice-text {
-    padding: 1.5rem;
-    width: 100%;
-  }
+}
 
-  .correct {
-    background-color:green;
-  }
+.choice-container[disabled] {
+  cursor: default;
+}
 
-  .incorrect {
-    background-color: red;
-  }
+.choice-prefix {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: var(--brand);
+  color: white;
+}
 
-  #hud{
-    display:flex;
-    justify-content: space-between;
-  }
+.choice-text {
+  padding: 1.5rem;
+  flex: 1;
+}
 
+.choice-mark {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
 
+/* Feedback pairs colour with a mark and text so it doesn't rely on colour alone. */
+.choice-container.correct {
+  background-color: var(--ok-bg);
+  border-color: var(--ok-text);
+}
 
-  .hud-prefix {
-    text-align: center;
-    font-size: 2rem;
-  }
+.choice-container.correct .choice-prefix {
+  background-color: var(--ok-text);
+}
 
-  .hud-main-text {
-    text-align: center;
-    font-size: 2rem;
-  }
-  h1 {
-    text-align: center;
-    font-size:3rem;
-  }
+.choice-container.correct .choice-text,
+.choice-container.correct .choice-mark {
+  color: var(--ok-text);
+}
 
-  #loader{
-    border: 1.6rem solid white;
-    border-radius: 50%;
-    border-top: 1.6rem solid rgb(43, 36, 143);
-    width: 12rem;
-    height: 12rem;
-    animation: spin 2s linear infinite;
-  }
+.choice-container.incorrect {
+  background-color: var(--bad-bg);
+  border-color: var(--bad-text);
+}
 
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+.choice-container.incorrect .choice-prefix {
+  background-color: var(--bad-text);
+}
+
+.choice-container.incorrect .choice-text,
+.choice-container.incorrect .choice-mark {
+  color: var(--bad-text);
+}
+
+.choice-container.dimmed {
+  opacity: 0.6;
+}
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.hud-item {
+  text-align: center;
+}
+
+.hud-prefix {
+  font-size: 1.6rem;
+  color: var(--muted);
+}
+
+.hud-main-text {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 700;
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+.progress {
+  height: 0.8rem;
+  background: white;
+  border: 0.1rem solid var(--brand-light);
+  margin-bottom: 2.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: var(--brand);
+  transition: width 300ms;
+}
+
+#question:focus {
+  outline: none;
+}
+
+.feedback-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 6rem;
+  margin-top: 1.5rem;
+}
+
+.feedback {
+  font-size: 1.8rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.feedback-correct {
+  color: var(--ok-text);
+}
+
+.feedback-incorrect {
+  color: var(--bad-text);
+}
+
+.feedback-row .btn {
+  margin-bottom: 0;
+  width: 16rem;
+}
+
+.hint {
+  font-size: 1.3rem;
+  color: var(--muted);
+  margin-top: 1.5rem;
+}
+
+@media (hover: none) {
+  .hint {
+    display: none;
   }
+}
+
+.error-title {
+  text-align: center;
+}
+
+#loader {
+  border: 1.6rem solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid rgb(43, 36, 143);
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

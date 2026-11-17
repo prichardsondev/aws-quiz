@@ -1,73 +1,102 @@
 const username = document.getElementById('username');
 const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
-const mostRecentScore = localStorage.getItem('mostRecentScore');
-const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-const savedResultsElement = document.getElementById('savedResults');
+const summary = document.getElementById('summary');
+const container = document.getElementById('container');
+const resultsBox = document.getElementById('savedResults');
+const resultsList = document.getElementById('results');
+const wrongOnly = document.getElementById('wrongOnly');
+const retryMissedBtn = document.getElementById('retryMissedBtn');
 
-finalScore.innerText = mostRecentScore;
+const MAX_HIGH_SCORES = 50;
 
-const savedResults = JSON.parse(localStorage.getItem('savedResults'));
-// savedResultsElement.append(JSON.stringify(savedResults));
+const correct = Number(localStorage.getItem('mostRecentScore')) || 0;
+const total = Number(localStorage.getItem('mostRecentTotal')) || 0;
+const category = localStorage.getItem('currentCatagory') || '';
+const pct = total ? Math.round((correct / total) * 100) : 0;
+const savedResults = readJson(localStorage, 'savedResults', []);
+const results = Array.isArray(savedResults) ? savedResults : [];
+const missed = results.filter((r) => r.selected !== r.answer);
 
-username.addEventListener('keyup', () => {
-    console.log(!username.value);
-    saveScoreBtn.disabled = !username.value;
-});
-
-saveHighScore = (e) => {
-    e.preventDefault();
-
-    const score = {
-        score: mostRecentScore,
-        name: username.value
-    };
-
-    highScores.push(score);
-
-    highScores.sort((a, b) => b.score - a.score);
-
-    highScores.splice(5);
-
-    localStorage.setItem('highScores',JSON.stringify(highScores));
-
-    window.location.assign('/');
+const verdict = (p) => {
+    if (p === 100) return 'Perfect score!';
+    if (p >= 80) return 'Great work.';
+    if (p >= 50) return 'Good effort – review the misses below.';
+    return 'Keep practising – try the questions you missed.';
 };
 
-const resultsBox = document.getElementById("savedResults");
-const container = document.getElementById("container");
+finalScore.textContent = total ? `${correct} / ${total} (${pct}%)` : 'No game played yet';
+summary.textContent = total ? `${categoryLabel(category)} · ${verdict(pct)}` : '';
 
-showResults = () => {
-    resultsBox.style.display = "block";
-    container.style.display = "none";
-    renderResults();
+if (!total) {
+    document.getElementById('saveForm').classList.add('hidden');
+    document.getElementById('reviewBtn').classList.add('hidden');
 }
 
-hideResults = () => {
-    resultsBox.style.display = "none";
-    container.style.display = "block";
-    document.getElementById("results").innerHTML = "";
+if (missed.length && missed.every((r) => r.raw)) {
+    retryMissedBtn.textContent = `Retry missed (${missed.length})`;
+    retryMissedBtn.classList.remove('hidden');
 }
+
+username.addEventListener('input', () => {
+    saveScoreBtn.disabled = !username.value.trim();
+});
+username.focus();
+
+document.getElementById('saveForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = username.value.trim();
+    if (!name || !total) return;
+
+    const highScores = readJson(localStorage, 'highScores', []);
+    highScores.push({ name, correct, total, pct, category, date: new Date().toISOString() });
+    // Rank by percentage, then by how many questions were answered.
+    highScores.sort((a, b) => (b.pct ?? -1) - (a.pct ?? -1) || (b.total ?? 0) - (a.total ?? 0));
+    writeJson(localStorage, 'highScores', highScores.slice(0, MAX_HIGH_SCORES));
+    window.location.assign('/highscores.html');
+});
+
+retryMissedBtn.addEventListener('click', () => {
+    writeJson(sessionStorage, 'retryQuestions', missed.map((r) => r.raw));
+    window.location.assign('/game.html');
+});
 
 const renderResults = () => {
-    for (let key in savedResults) {
-        console.log(key, savedResults[key]);
-        const block = document.getElementById("results")
-        const list = document.createElement('ul')
-        const row = savedResults[key]
-        const item = `
-            <ol>
-                <p class="savedQuestion ${row.answer === +row.selectedAnswer ? 'correctAnswer' : 'incorrectAnswer'}">${savedResults[key].question}</p>
-                <li>${savedResults[key].choice1}</li>
-                <li>${savedResults[key].choice2}</li>
-                <li>${savedResults[key].choice3}</li>
-                <li>${savedResults[key].choice4}</li>
-            </ol>
-            <strong>Correct answer:</strong> ${savedResults[key].selectedAnswer}<br>
-            <strong>Your answer:</strong> ${savedResults[key].answer}<br>
-            <br>`
-        list.innerHTML = item
+    const fragment = document.createDocumentFragment();
+    const rows = wrongOnly.checked ? missed : results;
+    if (!rows.length) fragment.append(el('p', wrongOnly.checked ? 'No wrong answers – nice!' : 'Nothing to review.'));
 
-        document.getElementById("results").appendChild(list)
-    }
-}
+    rows.forEach((row) => {
+        const isCorrect = row.selected === row.answer;
+        const item = el('article', undefined, 'review-item');
+        item.append(el('h3', `${isCorrect ? '✓' : '✗'} ${row.question}`, `savedQuestion ${isCorrect ? 'correctAnswer' : 'incorrectAnswer'}`));
+        const list = el('ol', undefined, 'review-choices');
+        row.choices.forEach((choice, i) => {
+            const slot = i + 1;
+            let note = '';
+            let cls = '';
+            if (slot === row.answer) { note = ' ✓ correct answer'; cls = 'correctAnswer'; }
+            if (slot === row.selected && !isCorrect) { note = ' ✗ your answer'; cls = 'incorrectAnswer'; }
+            const li = el('li', undefined, cls);
+            li.append(el('span', `${LETTERS[i]}. ${choice}`), el('strong', note));
+            list.append(li);
+        });
+        item.append(list);
+        fragment.append(item);
+    });
+    resultsList.replaceChildren(fragment);
+};
+
+document.getElementById('reviewBtn').addEventListener('click', () => {
+    container.classList.add('hidden');
+    resultsBox.classList.remove('hidden');
+    renderResults();
+    document.getElementById('reviewTitle').focus();
+});
+
+document.getElementById('backBtn').addEventListener('click', () => {
+    resultsBox.classList.add('hidden');
+    container.classList.remove('hidden');
+});
+
+wrongOnly.addEventListener('change', renderResults);

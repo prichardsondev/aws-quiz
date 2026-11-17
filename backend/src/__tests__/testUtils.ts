@@ -9,11 +9,11 @@ export class InMemoryRepo implements QuestionRepository {
   }
 
   get(category: string): Promise<Question[]> {
-    return Promise.resolve(this.data[category] ?? []);
+    return Promise.resolve(this.has(category) ? this.data[category] : []);
   }
 
   async post(category: string, question: Question): Promise<void> {
-    if (!this.data[category]) {
+    if (!this.has(category)) {
       this.data[category] = [];
     }
     this.data[category].push(question);
@@ -25,6 +25,10 @@ export class InMemoryRepo implements QuestionRepository {
 
   listCategories(): Promise<string[]> {
     return Promise.resolve(Object.keys(this.data));
+  }
+
+  private has(category: string): boolean {
+    return Object.prototype.hasOwnProperty.call(this.data, category);
   }
 }
 
