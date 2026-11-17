@@ -5,21 +5,24 @@ import { JsonDb } from './db';
 import { createRouter } from './router';
 import { QuizService } from './service';
 
-const corsOptions: cors.CorsOptions = {
-  origin: [
-    'https://awsquiz.raspberrynode.com',
-    'http://localhost:4000',
-    'https://awsquizapi.raspberrynode.com',
-  ],
-  optionsSuccessStatus: 200,
-};
+const DEFAULT_ORIGINS = [
+  'https://awsquiz.raspberrynode.com',
+  'http://localhost:4000',
+  'https://awsquizapi.raspberrynode.com',
+];
 
-export const createApp = (service: QuizService = new QuizService(new JsonDb())) => {
+const allowedOrigins = () =>
+  process.env.CORS_ORIGINS ? process.env.CORS_ORIGINS.split(',').map((o) => o.trim()) : DEFAULT_ORIGINS;
+
+export const createApp = (
+  service: QuizService = new QuizService(new JsonDb()),
+  apiKey: string | undefined = process.env.ADMIN_API_KEY
+) => {
   const app = express();
-  app.use(cors(corsOptions));
+  app.use(cors({ origin: allowedOrigins(), optionsSuccessStatus: 200 }));
   app.use(express.static(path.join(__dirname, '..', 'public')));
-  app.use(express.json());
-  app.use(createRouter(service));
+  app.use(express.json({ limit: '10kb' }));
+  app.use(createRouter(service, apiKey));
 
   app.get('/', (_req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));

@@ -1,0 +1,50 @@
+name: Quiz checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+
+      - name: Validate question bank
+        run: node ../scripts/validate-questions.js services.json
+
+      - name: Build static quiz
+        run: node ../scripts/build-static.js
+
+      - name: Test browser-storage helpers
+        run: node --test ../scripts/storage.test.js
+
+      - name: Install browser tests
+        working-directory: .
+        run: npm ci
+
+      - name: Install Chromium
+        working-directory: .
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser regression tests
+        working-directory: .
+        run: npm run test:e2e

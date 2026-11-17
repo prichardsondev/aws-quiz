@@ -1,40 +1,63 @@
+export function init() {
+const select = document.getElementById('catagories');
+const lengthSelect = document.getElementById('quizLength');
+const playBtn = document.getElementById('playBtn');
+const loadError = document.getElementById('loadError');
 
-
-// Dynamically load categories from backend /categories endpoint
 async function getCatagories() {
-    try {
-        const host = window.location.hostname;
-        const apiBase = host === 'awsquiz.raspberrynode.com' ? 'https://awsquizapi.raspberrynode.com' : (host === 'localhost' ? 'http://localhost:5000' : '');
-        const url = (apiBase || '') + '/categories';
-        const res = await fetch(url);
-        if (!res.ok) throw new Error('Network response was not ok');
-        const categories = await res.json();
-        return Array.isArray(categories) ? categories : [];
-    } catch (err) {
-        // Fallback to a conservative default list if backend isn't reachable
-        console.warn('getCatagories failed, using fallback list', err);
-        return [
-            'analytics','application_integration','compute','database','security_and_compliance','storage','networking_and_content_delivery','generative_ai','containers_and_orchestration','serverless','observability','other'
-        ];
-    }
+    const categories = Object.keys(await getBank());
+    if (!Array.isArray(categories) || categories.length === 0) throw new Error('no categories');
+    return categories;
 }
 
-async function loadCatagories () {
-    const select = document.getElementById('catagories');
-    const cats = await getCatagories();
-    const options = cats.map(c => `<option value="${c}">${c}</option>`).join('\n');
-    select.innerHTML = options;
-    // set stored value if exists
-    const current = localStorage.getItem('currentCatagory');
-    if (current && cats.includes(current)) select.value = current;
-    else if (cats.length) {
-        select.value = cats[0];
-        localStorage.setItem('currentCatagory', cats[0]);
+const option = (value) => {
+    const node = el('option', categoryLabel(value));
+    node.value = value;
+    return node;
+};
+
+async function loadCatagories() {
+    select.disabled = true;
+    playBtn.disabled = true;
+    loadError.classList.add('hidden');
+
+    let cats;
+    try {
+        cats = await getCatagories();
+    } catch (err) {
+        console.warn('getCatagories failed', err);
+        select.replaceChildren(el('option', 'Unavailable'));
+        loadError.classList.remove('hidden');
+        return;
     }
-    // update on change
-    select.addEventListener('change', () => {
-        localStorage.setItem('currentCatagory', select.value);
-    });
+
+    const services = cats.filter((c) => !isAcronymCategory(c))
+        .sort((a, b) => categoryLabel(a).localeCompare(categoryLabel(b)));
+    const acronyms = cats.filter(isAcronymCategory).sort();
+    const acronymGroup = el('optgroup');
+    acronymGroup.label = 'Acronyms';
+    acronymGroup.append(...acronyms.map(option));
+    select.replaceChildren(...services.map(option), ...(acronyms.length ? [acronymGroup] : []));
+
+    const current = localStore.getItem('currentCatagory');
+    select.value = current && cats.includes(current) ? current : (services[0] || acronyms[0]);
+    const savedLength = localStore.getItem('quizLength');
+    if (savedLength) lengthSelect.value = savedLength;
+
+    select.disabled = false;
+    playBtn.disabled = false;
 }
+
+document.getElementById('startForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    localStore.setItem('currentCatagory', select.value);
+    localStore.setItem('quizLength', lengthSelect.value);
+    sessionStore.removeItem('retryQuestions');
+    navigate('./game.html');
+});
+
+document.getElementById('retryCategories').addEventListener('click', loadCatagories);
 
 loadCatagories();
+
+}

@@ -1,142 +1,196 @@
-const question = document.getElementById('question');
-const choices = Array.from(document.getElementsByClassName('choice-text'));
+export function init() {
+const questionEl = document.getElementById('question');
+const choiceButtons = Array.from(document.querySelectorAll('.choice-container'));
 const questionCounterText = document.getElementById('questionCounter');
 const scoreText = document.getElementById('score');
 const loader = document.getElementById('loader');
 const game = document.getElementById('game');
-const home = document.getElementById('index');
-const catagory = document.getElementById('catagory');
+const catagoryEl = document.getElementById('catagory');
+const feedback = document.getElementById('feedback');
+const nextBtn = document.getElementById('nextBtn');
+const progressFill = document.getElementById('progressFill');
+const loadError = document.getElementById('loadError');
+const loadErrorText = document.getElementById('loadErrorText');
 
-let currentQuestion = {};
-let acceptingAnswers = false;
-let score = 0;
-let questionCounter = 0;
-let availableQuesions = [];
-let savedResults = {};
-let questionIndex;
+const CORRECT_BONUS = 1;
+const CORRECT_ADVANCE_MS = 1200;
+
+const category = localStore.getItem('currentCatagory');
+const quizLength = localStore.getItem('quizLength') || '10';
 
 let questions = [];
-let url = `https://awsquizapi.raspberrynode.com/learn/${localStorage.getItem("currentCatagory")}`
-console.log(url);
-fetch(url)
-    .then(res =>  res.json())
-    .then((loadedQuestions) => {
-        localStorage.removeItem('savedResults')
-        questions = loadedQuestions.map(loadedQuestion => {
-            const formattedQuestion = {
-                question:loadedQuestion.question,
-            }
+let questionIndex = -1;
+let score = 0;
+let acceptingAnswers = false;
+let advanceTimer = null;
+let results = [];
 
-            const answerChoices = [...loadedQuestion.distractors];
-            formattedQuestion.answer = Math.floor(Math.random() * 3) + 1;
-            answerChoices.splice(formattedQuestion.answer -1, 0,loadedQuestion.answer);
+if (!category) { setTimeout(() => navigate('./index.html', 'replaceState'), 0); return; }
 
-            answerChoices.forEach((choice,index) => {
-                formattedQuestion["choice" + (index+1)] = choice;
-            })
-
-            maxQuestions = loadedQuestions.length;
-
-            return formattedQuestion;
-
-        });
-
-        startGame();
-    })
-    .catch((err) => {
-        console.error(err);
-    });
-
-//CONSTANTS
-const CORRECT_BONUS = 1;
-let maxQuestions = 0;
-
-startGame = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuesions = [...questions];
-    getNewQuestion();
-    game.classList.remove('hidden')
-    loader.classList.add('hidden')
-    catagory.innerHTML = upperCaseFirstLetter(localStorage.getItem("currentCatagory"));
+const shuffle = (items) => {
+    const copy = [...items];
+    for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
 };
 
-upperCaseFirstLetter = (val) => {  
-    return val.charAt(0).toUpperCase() + val.slice(1);
+// Put the answer at a random position among the distractors; `answer` is a 1-based slot.
+const formatQuestion = (raw) => {
+    const choices = shuffle(raw.distractors).slice(0, 3);
+    const answer = Math.floor(Math.random() * (choices.length + 1)) + 1;
+    choices.splice(answer - 1, 0, raw.answer);
+    return { question: raw.question, choices, answer, source: raw };
+};
+
+const showError = (message) => {
+    loader.classList.add('hidden');
+    game.classList.add('hidden');
+    loadErrorText.textContent = message;
+    loadError.classList.remove('hidden');
+};
+
+async function loadQuestions() {
+    loadError.classList.add('hidden');
+    loader.classList.remove('hidden');
+
+    // "Retry missed" on the results page replays just the questions the player got wrong.
+    const retry = readJson(sessionStore, 'retryQuestions', null);
+    if (Array.isArray(retry) && retry.length && retry.every(isQuestion)) {
+        sessionStore.removeItem('retryQuestions');
+        return retry;
+    }
+
+    const data = (await getBank())[category];
+    if (!Array.isArray(data) || data.length === 0) throw new Error('This category has no questions yet.');
+    const shuffled = shuffle(data);
+    return quizLength === 'all' ? shuffled : shuffled.slice(0, Number(quizLength) || 10);
 }
 
-getNewQuestion = () => {
-    if (availableQuesions.length === 0 || questionCounter >= maxQuestions) {
-        //go to the end page
-        localStorage.setItem('mostRecentScore',score);
-        return window.location.assign('/end.html');
+async function startGame() {
+    let loaded;
+    try {
+        loaded = await loadQuestions();
+    } catch (err) {
+        console.error(err);
+        showError(err instanceof TypeError ? 'Check your connection and try again.' : err.message);
+        return;
     }
-    questionCounter++;
-    questionCounterText.innerHTML = `${questionCounter}/${maxQuestions}`;
+    questions = loaded.map(formatQuestion);
+    questionIndex = -1;
+    score = 0;
+    results = [];
+    scoreText.innerText = score;
+    catagoryEl.innerText = categoryLabel(category);
+    loader.classList.add('hidden');
+    game.classList.remove('hidden');
+    getNewQuestion();
+}
 
-    questionIndex = Math.floor(Math.random() * availableQuesions.length);
-    currentQuestion = availableQuesions[questionIndex];
-    question.innerText = currentQuestion.question;
-
-    savedResults[questionCounter] = currentQuestion
-
-    choices.forEach((choice) => {
-        const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];
-    });
-
-    availableQuesions.splice(questionIndex, 1);
-    acceptingAnswers = true;
+const finishGame = () => {
+    localStore.setItem('mostRecentScore', score);
+    localStore.setItem('mostRecentTotal', questions.length);
+    writeJson(localStore, 'savedResults', results);
+    window.removeEventListener('beforeunload', confirmLeave);
+    navigate('./end.html');
 };
 
-choices.forEach((choice) => {
-    choice.addEventListener('click', (e) => {
-        if (!acceptingAnswers) return;
+const getNewQuestion = () => {
+    clearTimeout(advanceTimer);
+    questionIndex++;
+    if (questionIndex >= questions.length) return finishGame();
 
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset['number'];
-        
-        const classToApply = selectedAnswer==currentQuestion.answer?"correct":"incorrect";
+    const current = questions[questionIndex];
+    questionCounterText.innerText = `${questionIndex + 1}/${questions.length}`;
+    progressFill.style.width = `${(questionIndex / questions.length) * 100}%`;
+    questionEl.innerText = current.question;
 
-        selectedAnswer!=currentQuestion.answer?showToast(currentQuestion.answer):null;
-
-        savedResults[questionCounter]['selectedAnswer'] = selectedAnswer
-        localStorage.setItem("savedResults", JSON.stringify(savedResults))
-
-        scoreText.innerText = classToApply==='correct'?(score+=CORRECT_BONUS):score;
-
-        selectedChoice.parentElement.classList.add(classToApply);
-
-        setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion();
-        }, selectedAnswer!=currentQuestion.answer?4000:1000);
-
-        
+    choiceButtons.forEach((button, i) => {
+        const text = current.choices[i];
+        button.classList.remove('correct', 'incorrect', 'dimmed');
+        button.querySelector('.choice-text').innerText = text ?? '';
+        button.querySelector('.choice-mark').textContent = '';
+        button.hidden = text === undefined;
+        button.disabled = false;
+        button.removeAttribute('aria-label');
     });
+
+    feedback.textContent = '';
+    feedback.className = 'feedback';
+    nextBtn.classList.add('hidden');
+    acceptingAnswers = true;
+    questionEl.focus();
+};
+
+const markChoice = (button, state, label) => {
+    button.classList.add(state);
+    button.querySelector('.choice-mark').textContent = state === 'correct' ? '✓' : '✗';
+    button.setAttribute('aria-label', `${button.innerText.trim()} – ${label}`);
+};
+
+const answer = (selected) => {
+    if (!acceptingAnswers) return;
+    acceptingAnswers = false;
+
+    const current = questions[questionIndex];
+    const isCorrect = selected === current.answer;
+    const correctButton = choiceButtons[current.answer - 1];
+    const selectedButton = choiceButtons[selected - 1];
+
+    choiceButtons.forEach((button) => {
+        button.disabled = true;
+        if (button !== correctButton && button !== selectedButton) button.classList.add('dimmed');
+    });
+    markChoice(correctButton, 'correct', 'correct answer');
+    if (!isCorrect) markChoice(selectedButton, 'incorrect', 'your answer');
+
+    if (isCorrect) score += CORRECT_BONUS;
+    scoreText.innerText = score;
+    results.push({ question: current.question, choices: current.choices, answer: current.answer, selected, raw: current.source });
+    progressFill.style.width = `${((questionIndex + 1) / questions.length) * 100}%`;
+
+    const correctText = `${LETTERS[current.answer - 1]}: ${current.choices[current.answer - 1]}`;
+    feedback.textContent = isCorrect ? 'Correct!' : `Not quite – the answer is ${correctText}`;
+    feedback.className = `feedback ${isCorrect ? 'feedback-correct' : 'feedback-incorrect'}`;
+
+    const last = questionIndex === questions.length - 1;
+    nextBtn.textContent = last ? 'See results' : 'Next';
+    nextBtn.classList.remove('hidden');
+    nextBtn.focus();
+    // Right answers move on by themselves; wrong ones wait so the player can read the correction.
+    if (isCorrect) advanceTimer = setTimeout(getNewQuestion, CORRECT_ADVANCE_MS);
+};
+
+choiceButtons.forEach((button) => {
+    button.addEventListener('click', () => answer(Number(button.dataset.number)));
 });
 
-function showToast(correctAnswer) {
-    console.log('toast');
-    console.log(correctAnswer, typeof(correctAnswer));
-    const x = document.getElementById("toast");
-    x.className = "show";
-    let letterAnswer;
-    if(correctAnswer===1){
-        letterAnswer = "A";
-    } 
-    else if(correctAnswer===2){
-        letterAnswer = "B";
-    }
-    else if (correctAnswer===3){
-        letterAnswer = "C";
-    }
-    else if(correctAnswer===4){
-        letterAnswer = "D";
-    }
-    else(letterAnswer="err...check showToast() ./public/game.js")
+nextBtn.addEventListener('click', getNewQuestion);
 
-    x.innerText = `Correct answer is ${letterAnswer}`;
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+const onKeydown = (e) => {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    const key = e.key.toUpperCase();
+    const slot = '1234'.indexOf(key) + 1 || LETTERS.indexOf(key) + 1;
+    if (slot && acceptingAnswers && !choiceButtons[slot - 1].hidden) {
+        e.preventDefault();
+        answer(slot);
+    }
+};
+document.addEventListener('keydown', onKeydown);
+
+const confirmLeave = (e) => {
+    if (questionIndex >= 0 && questionIndex < questions.length) {
+        e.preventDefault();
+        e.returnValue = '';
+    }
+};
+window.addEventListener('beforeunload', confirmLeave);
+
+document.getElementById('retryLoad').addEventListener('click', startGame);
+
+if (category) startGame();
+
+return () => { clearTimeout(advanceTimer); document.removeEventListener("keydown", onKeydown); window.removeEventListener("beforeunload", confirmLeave); };
+
 }

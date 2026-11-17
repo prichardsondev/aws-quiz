@@ -1,15 +1,26 @@
 #highScoresList {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 4rem;
-  }
-  
-  .high-score {
-    font-size: 2.8rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .high-score:hover {
-    transform: scale(1.025);
-  }
-  
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 4rem;
+  width: 100%;
+  max-width: 60rem;
+  counter-reset: rank;
+}
+
+.high-score {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  background: white;
+  padding: 1rem 1.4rem;
+  margin-bottom: 0.5rem;
+  counter-increment: rank;
+}
+
+.high-score::before {
+  content: counter(rank) ". ";
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.high-score.empty::before {
+  content: none;
+}

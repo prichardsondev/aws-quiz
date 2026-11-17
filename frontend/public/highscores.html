@@ -3,19 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>High Scores</title>
+    <title>High Scores – AWS Service Quiz</title>
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/highscores.css" />
-  </head>
+  <link rel="stylesheet" href="./css/game.css" />
+</head>
   <body>
-    <div class="container">
+    <main class="container">
       <div id="highScores" class="flex-center flex-column">
-        <h1 id="finalScore">High Scores</h1>
-        <ul id="highScoresList"></ul>
-        <a class="btn" href="/">Go Home</a>
+        <h1>High Scores</h1><p class="summary">Scores are saved in this browser only.</p>
+        <label class="label" for="scoreFilter">Category</label>
+        <select id="scoreFilter"><option value="">All categories</option></select>
+        <ol id="highScoresList"></ol>
+        <a class="btn" href="./index.html">Go home</a>
       </div>
-    </div>
-    <script src="./js/highscores.js"></script>
+    </main>
+    <script src="./js/common.js"></script>
+
   </body>
 </html>
